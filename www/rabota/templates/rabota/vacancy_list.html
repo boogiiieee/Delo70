@@ -1,0 +1,64 @@
+{% load rabota_tags ibanners_tags %}
+<div class="row-fluid block_item list">
+	{% if items_list %}
+		{% for list in items_list|mas_2 %}
+			<div class="span6">
+				{% for item in list %}
+					<div {% if item.order < -999 %}class="up_item"{% endif %}>
+						<div class="block_info pull-right">
+							<div class="row-fluid">
+								<div class="span5 t_right">Дата:&nbsp;</div>
+								<div class="span7 black">{{ item.created|date:"d.m.Y" }}</div>
+							</div>
+							{% if item.wage_min or item.wage_max %}
+								<div class="row-fluid">
+									<div class="span5 t_right">Зарплата:&nbsp;</div>
+									<div class="span7 black">{% if item.wage_min %}от {{ item.wage_min }}{% else %}{% if item.wage_max %}до {{ item.wage_max }}{% endif%}{% endif%} руб.</div>
+								</div>
+							{% endif %}
+							{% if item.experience %}
+								<div class="row-fluid">
+									<div class="span5 t_right">Опыт:&nbsp;</div>
+									<div class="span7 black">{{ item.experience }}</div>
+								</div>
+							{% endif %}
+						</div>
+						<div class="media-body">
+							<h3><a href="{% if ct %}{% url vacancy_category_item slug_city=city.slug, ct=ct.id, id=item.id, slug=item.slug %}{% else %}{{ item.get_absolute_url }}{% endif %}">{{ item }}</a></h3>
+							<p>
+								{{ item.brief|truncatechars:100 }}
+							</p>
+						</div>
+						<div  class="clearfix"></div>
+						{% if not forloop.last %}<hr/>{% endif %}
+					</div>
+					{% if forloop.counter == list|div2 %}
+						<div class="adsense">
+							{% if forloop.parentloop.first %}
+								{% banner request 5 %}
+							{% else %}
+								{% banner request 6 %}
+							{% endif %}
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% endfor %}
+	{% else %}
+		<div class="t_center">
+			{% if not q and not category %}<h2 class="t_center">Список вакансий пуст!</h2>{% endif %}
+			<br/>
+			<p>Ищете работу и не нашли подходящую с помощью поиска???</p>
+			<p class="black up">Не расстраивайтесь, мы знаем как вам ПОМОЧЬ!!!</p>
+			<p>
+				●&nbsp;<a class="up" href="{% url resume_add slug_city=request.location.slug %}">Добавьте свое резюме</a> к нам на сайт и работодатель сам найдет Вас;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</p> 
+			<p>
+				●&nbsp;<a class="up" href="{% url vacancy_subscribe_add %}">"Подпишитесь на вакансии"</a> и узнавай первым о новых вакансиях;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</p> 
+			<p>●&nbsp;Измените критерии поиска, воспользовшись <a class="up" href="{% url vacancy_search_advanced slug_city=request.location.slug %}">расширенным поиском</a>! </p>
+		</div>
+	{% endif %}
+</div>
+
+{% include "paginate.html" %}

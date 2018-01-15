@@ -1,0 +1,18 @@
+{% extends "default.html" %}
+
+{% block title %}Мои вакансии{% endblock %}</h1>
+
+{% block extra_media %}{% endblock %}
+
+{% block breadcrumb_item %}
+	<li class="active">Мои вакансии</li>
+{% endblock %}
+
+{% block h1 %}Мои вакансии{% endblock %}</h1>
+
+
+{% block content %}
+	<div class="row-fluid">
+		{% include "rabota/account_vacancy_list.html" %}
+	</div>
+{% endblock %}

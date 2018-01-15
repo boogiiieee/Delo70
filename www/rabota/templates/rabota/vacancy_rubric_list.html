@@ -1,0 +1,22 @@
+{% load rabota_tags %}
+
+{% if rubric_list %}
+	<div class="row-fluid rublic_list" style="margin-bottom:20px;">
+		{% for list in rubric_list %}
+			<div class="span3">
+				<ul>
+				{% for item in list %}
+					<li class="green {% ifequal item.id ct.id %}active{% endifequal %}" >
+						<a href="{{ item|get_category_vacancy_absolut_url:city.slug }}" style="text-decoration:none">
+							<span>{{ item.get_title }}</span>
+						</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="dotted">
+		&nbsp;
+	</div>
+{% endif %}

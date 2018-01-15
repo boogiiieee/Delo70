@@ -1,0 +1,19 @@
+{% extends "registration/2col.html" %}
+
+{% block extra_media %}{% endblock %}
+
+{% block breadcrumb %}{% endblock %}
+
+{% block subcontent %}
+		<form class="form-horizontal pull-left border_r" action="{% url auth_login %}" method="post">{% csrf_token %}
+			{% include "forform.html" %}
+			<input type="hidden" name="next" value="{{ next }}" />
+			<div>
+				<div class="controls">
+					<p><a href="{% url auth_password_reset %}">Забыли логин или пароль?</a></p>
+					<button type="submit" class="btn btn-success">Войти</button>
+					<a class="btn" href="{% url registration_register %}">Регистрация</a>
+				</div>
+			</div>
+		</form>
+{% endblock %}

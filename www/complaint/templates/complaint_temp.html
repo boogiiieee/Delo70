@@ -1,0 +1,26 @@
+<a class="no_decor error_complaint pull-right" href="#complaint_form" role="button" data-toggle="modal"><span>Пожаловаться</span></a>
+
+<form class="modal hide" id="complaint_form" tabindex="-1" role="dialog" aria-hidden="true">	
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="text-center"><span class="green">Пожаловаться.</span> Напишите сообщение:</h4>       	        
+    </div>	   
+    <div class="modal-body"> 
+    	<span class="input_error text-error errorlist"></span>
+    	<div class="row-fluid">     
+			{{ form.message }}
+		</div>		
+    </div>	
+    <div class="modal-footer">
+			<button class ="bttn_send btn btn-success"  value="Отправить">Отправить</button>
+			<button class ="btn" data-dismiss="modal" aria-hidden="true" value="Отмена">Отмена</button>						
+	</div>  			
+</form>
+
+<div class="modal hide" id="complaint_thanks" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-header">	
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h2 class="text-center"><span class="green">Сообщение отправлено.</span> Благодарим за помощь. 			
+		</h2>
+	</div>
+</div>

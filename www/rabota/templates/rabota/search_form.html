@@ -1,0 +1,35 @@
+
+<form id="search_form" class="form-inline span12" action="{% url vacancy_search slug_city=request.location.slug %}" method="get">
+	<div class="row-fluid form-inline">
+		<div class="span12 block_form" style="{% ifnotequal active 1%}border-top-left-radius: 5px;{% endifnotequal %}{% ifequal account_active 4%}border-top-right-radius: 0px;{% endifequal %}">
+			{{ search.q }}
+			<input class="input-mini pull-right" type="submit" value="Искать">
+		</div>
+		
+		<div class="pull-right block_form_category">
+			{{ search.category }}
+		</div>
+		<div class="pull-left block_form_search">
+			{{ search.type_search }}
+		</div>
+		<div class="pull-right block_form_search"><a id="href_search_advanced" href="{% url vacancy_search_advanced slug_city=request.location.slug %}"><span>Расширенный поиск</span></a></div>
+	</div>
+</form>
+
+<script type="text/javascript">
+	if ($('input[name="type_search"]:checked').val() == 'resume'){
+		$('#search_form').attr("action", "{% url resume_search slug_city=request.location.slug %}");
+		$('#href_search_advanced').attr("href", "{% url resume_search_advanced slug_city=request.location.slug %}");
+	};
+	$('input[name="type_search"]').click(function() {
+	   if ($('input[name="type_search"]:checked').val() == 'resume'){
+			$('#search_form').attr("action", "{% url resume_search slug_city=request.location.slug %}");
+			$('#href_search_advanced').attr("href", "{% url resume_search_advanced slug_city=request.location.slug %}");
+		}
+	   else{
+			$('#search_form').attr("action", "{% url vacancy_search slug_city=request.location.slug %}");
+			$('#href_search_advanced').attr("href", "{% url vacancy_search_advanced slug_city=request.location.slug %}");
+		}
+	});
+</script>
+

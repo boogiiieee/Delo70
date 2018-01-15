@@ -1,0 +1,111 @@
+{% extends "default.html" %}
+{% load cache %}
+{% load simpleblocks_tags rabota_tags news_tags ibanners_tags  %}
+
+{% block flatpage %}{% endblock %}
+
+{% block extra_media %}{% endblock %}
+
+{% block banners_top %}{% endblock %}
+
+{% block breadcrumb %}{% endblock %}
+
+{% block content %}
+	<div class="block_item">
+		{% get_simpleblock 'top' %}
+	</div>
+	<div class="row-fluid">
+		{% get_simpleblock 'banner_top_1' %}
+		{% get_simpleblock 'banner_top_2' %}
+		<div class="clr"></div>
+	</div>
+	{% cache 3600 index request.location.slug %}
+		<div class="dotted">
+			<h1>{% get_simpleblock 'title_page' %}</h1>
+			<span class="bg_white for_btn pull-right"><a class="btn btn-success" href="{% url vacancy_add slug_city=request.location.slug %}">Добавить вакансию</i></a></span>
+			<a class="bg_white pull-right" href="{% url resume_add slug_city=request.location.slug %}"><small>Добавить резюме</small></a>
+		</div>
+		<div class="row-fluid last_vacancy">
+			{% for list in last_vacancy|mas_2 %}
+				<div class="span6">
+					{% for item in list %}
+						<div {% if item.order < -999 %}class="up_item"{% endif %}>
+							<div class="block_info pull-right">
+								<div class="row-fluid">
+									<div class="span5 t_right">Дата:&nbsp;</div>
+									<div class="span7 black">{{ item.created|date:"d.m.Y" }}</div>
+								</div>
+								{% if item.wage_min or item.wage_max %}
+									<div class="row-fluid">
+										<div class="span5 t_right">Зарплата:&nbsp;</div>
+										<div class="span7 black">{% if item.wage_min %}от {{ item.wage_min }}{% else %}{% if item.wage_max %}до {{ item.wage_max }}{% endif%}{% endif%} руб.</div>
+									</div>
+								{% endif %}
+							</div>
+							<div class="media-body">
+								<h3><a href="{{ item.get_absolute_url }}">{{ item }}</a></h3>
+								<p>
+									{{ item.brief|truncatechars:60 }}
+								</p>
+							</div>
+							<div  class="clearfix"></div>
+							{% if not forloop.last %}<hr/>{% endif %}
+						</div>
+						{% if forloop.counter == list|div2 %}
+							<div class="adsense">
+								{% if forloop.parentloop.first %}
+									{% banner request 5 %}
+								{% else %}
+									{% banner request 6 %}
+								{% endif %}
+							</div>
+						{% endif %}
+					{% empty %}
+						<div class="adsense">
+							{% if forloop.parentloop.first %}
+								{% banner request 5 %}
+							{% else %}
+								{% banner request 6 %}
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+			{% empty %}
+				Нет вакансий.
+			{% endfor %}
+		</div>
+		<div class="dotted">
+			<a class="bg_white pull-right" href="{% url vacancy slug_city=request.location.slug %}"><small>посмотреть все вакансии</small></a>
+			<div class="clearfix"></div>
+		</div>
+		
+		
+		{% get_simpleblock 'soc' %}
+		
+		{% if rubric_list %}
+			<div class="row-fluid rublic_list" style="margin-bottom:20px;">
+				{% for list in rubric_list %}
+					<div class="span3">
+						<ul>
+						{% for item in list %}
+							<li class="green {% ifequal item.id ct.id %}active{% endifequal %}" >
+								<a href="{{ item|get_category_vacancy_absolut_url:request.location.slug }}" style="text-decoration:none">
+									<span>{{ item.get_title }}</span><sup>&nbsp;{{ item|count_vacation_location:request.location|default:"0" }}</sup>
+								</a>
+							</li>
+						{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="dotted">
+				&nbsp;
+			</div>
+		{% endif %}
+		
+		{% include "news/news_in_main.html" %}
+		
+		{% get_simpleblock 'contacts' %}
+		{% get_simpleblock 'seo' %}
+	{% endcache %}
+{% endblock %}

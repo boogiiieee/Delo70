@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Городской портал tomsk.ru &mdash; Вакансия Вахта Север. Водители С, Д, Е (Транспорт экспедиция автобизнес) з/п от 80000р.</title>
+	<meta name="Keywords" content="Томский городской портал, Томск, Портал города Томска, Недвижимость в Томске, Авторынок Томска, Продажа авто в Томске, Работа в Томске, Вакансии, Резюме, Отдых в Томске, Афиша Томска, Новости Томска, Томский форум, Погода в Томске, Томские сайты, Каталог томских сайтов, Частные объявления" />
+	<meta name="Description" content="Новости Томска – подборка новостей из общественной жизни города, политики, спорта, обзор происшествий, событий. Полезная информация о недвижимости, авто, финансах, работе и консультации специалистов. Объявления по различным тематикам, вакансии томских работодателей. Афиша городских мероприятий, погода, курс валют, каталог сайтов, форум." />
+	<meta name="title" content="Вакансия Вахта Север. Водители С, Д, Е (Транспорт экспедиция автобизнес) з/п от 80000р." />
+	<meta name="8afbb3fbc1179bdc911cb1712bd8d86a" content="">
+	<meta name='yandex-verification' content='62e9ecd302d537ab' />
+	<link href="/css/styles.css?1380081552" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/adv.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/styles/jquery.jgrowl.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/js/lightbox/jquery.lightbox-0.5.css" media="screen" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.winresize.js"></script>
+<script type="text/javascript" src="/js/jquery.json-1.3.js"></script>
+<script type="text/javascript" src="/js/uncompressed/jquery.jgrowl.js?1372329144"></script>
+<script type="text/javascript" src="/js/jquery.feature.js?1378268626"></script>
+<script type="text/javascript" src="/js/jquery.bt.js"></script>
+<script type="text/javascript" src="/js/core.js?1377687548"></script>
+<script type="text/javascript" src="/js/app.validate.js"></script>
+<script type="text/javascript" src="/js/app.bcal.min.js"></script>
+<script type="text/javascript" src="/js/jquery.tiny-tooltip.min.js"></script>
+<script type="text/javascript" src="/js/jquery.fixonscroll.min.js?1372217763"></script>
+<script type="text/javascript" src="/js/lightbox/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript" src="/js/jquery.input-hint.js"></script>
+	
+			
+<script type="text/javascript">
+//<!--
+	$(document).ready(function(){
+$.getScript('http://stg.odnoklassniki.ru/share/odkl_share.js');
+
+$('#auth_link_btn').click(function () {
+	tr_hideAllPanel('hide', 0, '#auth_block_btn div.ddbox');
+	$('#auth_block_btn div.ddbox').slideDown(200).click(function (ev) {
+		ev.stopPropagation();
+	});
+	return false;
+});
+$('#auth_form_btn_id').hover(
+	 function () {$(this).addClass('btn-active')}
+	,function () {$(this).removeClass('btn-active')}
+);
+$('#auth_form_btn_id a').click(function () {
+	$('#auth_form_id').submit();
+	return false;
+});
+$(document).click(function () {
+	tr_hideAllPanel('hide', 0);
+});
+
+
+                       if ($.fn.lightBox) {
+                           jQuery("a.lightbox").lightBox({
+                               imageLoading:  "/js/lightbox/lightbox_img/loading.gif",
+                               imageBtnClose: "/js/lightbox/lightbox_img/close.gif",
+                               imageBtnPrev:  "/js/lightbox/lightbox_img/prev.gif",
+                               imageBtnNext:  "/js/lightbox/lightbox_img/next.gif"
+                           });
+                       }
+                   
+
+$('#hidden-part').click(function (e) {e.stopPropagation();});
+
+$('*[hint]').inputHint({hintclass:'hint'});
+
+$('#job_search_btn_left, #job_search_btn_right').hover(
+	 function () {$(this).addClass('btn-active')}
+	,function () {$(this).removeClass('btn-active')}
+);
+
+
+if($('#inp_search_id').val() != '') {
+    $('#inp_search_id').removeClass('ya')
+};
+$('#inp_search_id').focus(function () {
+	$(this).removeClass('ya');
+}).blur(function () {
+	if (!this.value.length) $(this).addClass('ya');
+});
+$('#search_form_btn_id a').click(function () {
+	$('#search_form_id').submit();
+	return false;
+});
+$('#search_form_btn_id').hover(
+	 function () {$(this).addClass('btn-active');}
+	,function () {$(this).removeClass('btn-active');}
+);
+	});
+//-->
+</script>
+	
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" href="/styles/ie6.css" type="text/css" media="screen, projection" />
+		<script type="text/javascript" src="/styles/iepngfix_tilebg.js"></script>
+	<![endif]-->
+
+	<!--[if lte IE 8]>
+		<script type="text/javascript" src="/js/respond.min.js"></script>
+		<script type="text/javascript">window.onresize = function(){respond.update();}</script>
+		<link rel="stylesheet" href="/css/ie8.css" type="text/css" media="screen, projection" />
+	<![endif]-->
+
+
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?97"></script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41074803-2', 'www.tomsk.ru');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body>
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">//<![CDATA[
+var _tmr = _tmr || [];
+_tmr.push({id: "2406162",  type: "pageView", start: (new Date()).getTime()});
+(function (d, w) {
+   var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+   ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+   var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+   if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window);
+//]]></script><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=2406162;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+<div class="page">        <div class="panel-1245 auth-panel">
+            <div>
+                <a href="/auth/">Регистрация</a>
+                <a href="/auth/restore/">Забыли пароль?</a>
+                <form action="/auth/login/gate" method="POST" id="auth_form_id">
+                    <input class="inp-text" type="text" name="login" placeholder="Логин" />
+                    <input class="inp-text" type="password" name="password" placeholder="Пароль" />
+                    <label><input type="checkbox" name="rememberme" value="1" checked="checked" /> Запомнить</label>
+
+                    <div class="h21 cut inner-red outer-transparent left-square right-fall">
+                        <div class="cut-l"></div><div class="cut-c"><button onclick="$tru.clearUserProfile();return true;" style="cursor: pointer" type="submit">Войти</button></div><div class="cut-r"></div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $tru.loadUserProfile($('script').last().prev());
+        </script>
+            <div class="panel-1245 clear" style="margin-bottom: 0; height: 60px;">
+            <!--div class="banner">баннер  : 19005 : 960+ x 60 найден</div--><div id="b-19005" data-id="19005" class="banner b19005 banner-960p_x_60"><div class="b-inner"><a href="/route/?url=http://pogodavtomske.ru/index.html&amp;section=bstat&amp;rid=1179" target="_blank"><div class="b-image"><img src="/resources/content/f1369468699.jpg" style="" alt="" /></div></a></div></div>        </div>
+        <div class="panel-1245 crop h1u">
+        <div class="fixed-scroll left-column w1u">
+            <div class="h1u">
+                        <div id="head-logo">
+                        <a href="/" title="Главная страница"><img src="/images/logo.png" width="210" height="100" alt="Городской портал tomsk.ru" border="0" /></a>
+        </div>
+                </div>
+        </div>
+        <div id="body-content-0_1" class="body-content w4u-dynamic h1u">
+            <div id="head-part" class="w4u-dynamic"><div id="hidden-part"></div><ul><li><ul><li><a href="/news/">Новости</a><li><a href="/realty/">Недвижимость</a><li class=" active"><a href="/job/">Работа</a><li><a href="/catalog/">Каталог</a></ul><ul><li><a href="/auto/">Авто</a><li><a href="/desk/">Объявления</a><li><a href="/domains/">Домены</a><li><a href="/finance/">Бизнес/Финансы</a></ul></li><li><ul><li><a href="/consultations/">Эксперты</a><li><a href="/afisha/">Афиша</a><li><a href="/guide/">Путеводитель</a><li><a href="/relax/">Отдых/Туризм</a></ul><ul><li><a href="/skidki/">Акции/Скидки</a><li><a href="/lady/">Девичник</a><li><a class="new"href="/route/?url=http://video.tomsk.ru/&amp;section=main" target="_blank">Видео</a><li><a href="/route/?url=http://pogodavtomske.ru/&amp;section=main" target="_blank">Погода</a></ul></li><li><ul><li><a href="/job/trainings/">Тренинги</a><li><a href="/route/?url=http://i.rde.ru/gazeta/tvprogram/&amp;section=main" target="_blank">Телепрограмма</a><li><a href="/route/?url=http://forum.tomsk.ru/&amp;section=main" target="_blank">Форум</a><li><a href="/search/">Поиск</a></ul></li></ul></div>        </div>
+        <div class="fixed-scroll right-column w1u">
+            <div class="h1u">
+                    <div id="head-informer">
+        
+		<div class="temperature">
+			<div class="temp-current"><img src="/images/weather/icons/d.sun.c4.png" width="36" height="36" alt="пасмурно, без осадков" title="пасмурно, без осадков" /><span class="temp">+3.0</span><br /><span class="desc">пасмурно, без осадков</span></div>
+			<div class="forecast"><span class="title">завтра</span><br /><img src="/images/weather/icons/d.sun.c2.png" width="24" height="24" alt="переменная облачность, без осадков" title="переменная облачность, без осадков" />+8.0</div>
+			<div class="forecast"><span class="title">послезавтра</span><br /><img src="/images/weather/icons/d.sun.c2.png" width="24" height="24" alt="переменная облачность, без осадков" title="переменная облачность, без осадков" />+13.0</div>
+		</div>        <div class="currency">
+			<div class="item"><strong>$</strong>32.34<sub>51</sub><sup class="green">+0.1715</sup></div>
+			<div class="item"><strong>&euro;</strong>43.64<sub>97</sub><sup class="green">+0.1510</sup></div>
+		</div>    </div>
+                </div>
+        </div>
+    </div>
+                    <script type="text/javascript">
+                (function () {
+                    var container = $('script').last().prev(), o;
+                    container.find('> .fixed-scroll > div').fixOnScroll(o = {
+                        fixedBottom: 15,
+                        boxHeight: function(){return container.height() - 15},
+                        boxTop: container.offset().top
+                    });
+                    //console && console.log('panel', container, o);
+                })();
+            </script>
+        
+        <div class="panel-1245 crop h1u">
+        <div class="fixed-scroll left-column w1u">
+            <div class="h1u">
+                    <form action="" method="GET" id="job_search_frm"><div class="line"><input type="text" name="job_name" id="job_name" value="" hint="Профессия" /></div><div class="half-line first clear"><a href="/job/resume/new" class="link-btn">Добавить резюме</a><br /><a href="/job/vacancy/new" class="link-btn">Добавить вакансию</a></div>
+<div class="half-line job_btn">
+	<div class="btn-gray-right" id="job_search_btn_left"><div class="mask"></div><a href="/job/#t-1=0">Сотрудника</a></div>
+	<div class="btn-gray-left" id="job_search_btn_right"><div class="mask"></div><a href="/job/#t-1=2">Работу</a></div>
+	<input type="image" src="/images/s.gif" width="1" height="1" />
+</div>
+<div class="half-line first"> <a href="/job/desk/view/328809">Юрист</a> <a href="/job/desk/view/328808">Слесарь КИПиА 5 разряда</a></div><div class="half-line"><a href="/job/desk/view/328807">Оператор котельной на жидкое и газообразное топливо</a> <a href="/job/desk/view/328806">Машинист крана автомобильного</a></div></form>                    </div>
+        </div>
+        <div id="body-content-0_2" class="body-content w4u-dynamic h1u">
+            <!--div class="banner">баннер  : 19006 : 615+ x 100 найден</div--><div id="b-19006" data-id="19006" class="banner b19006 banner-615p_x_100"><div class="b-inner"><div style="position:relative;"><a href="/route/?url=http://www.nskbl.ru/private/mortgage/&section=bstat&rid=1201" target="_blank">
+					<img src="/images/s.gif" alt="" border="0" style="min-width: 615px; width: 100%; height:100px;z-index:1;position:absolute;" /></a><object type="application/x-shockwave-flash" style="min-width: 615px; width: 100%; height:100px;" data="/resources/content/f1369630712.swf?alink1=%2Froute%2F%3Furl%3Dhttp%3A%2F%2Fwww.nskbl.ru%2Fprivate%2Fmortgage%2F%26section%3Dbstat%26rid%3D1201"><param name="movie" value="/resources/content/f1369630712.swf?alink1=%2Froute%2F%3Furl%3Dhttp%3A%2F%2Fwww.nskbl.ru%2Fprivate%2Fmortgage%2F%26section%3Dbstat%26rid%3D1201" /><param name="wmode" value="opaque"></object></div></div></div>        </div>
+        <div class="fixed-scroll right-column w1u">
+            <div class="h1u">
+                        <form action="/search/" id="search_form_id" method="GET">
+                    <div class="line">
+                        <input id="inp_search_id" class="ya" type="text" name="text" value="" />
+                    </div>
+                    <div class="clear">
+                   <label><input class="inp_radio" name="section" type="radio" checked value="tomskru" />по сайту</label><label><input class="inp_radio" name="section" type="radio" value="tomsk"  />в томске</label><label id="lbl_search_type_web_id"><input class="inp_radio" name="section" value="internet" type="radio"  />в интернете</label><div class="btn-gray-left f-right" id="search_form_btn_id"><div class="mask"></div><a href="#">Найти</a></div>
+                    </div>
+                </form>        <div class="half-line first"> <a class="nowrap" href="/skidki/view/1766">10 дней низких цен в Посуда центре!</a> <a class="nowrap" href="/skidki/view/1764"> "Выгодная цена" </a></div><div class="half-line"><a class="nowrap" href="/skidki/view/1763">«Тотальная распродажа»!</a> <a class="nowrap" href="/skidki/view/1762">Визит к косметологу с 50% скидкой! </a></div>                </div>
+        </div>
+    </div>
+                    <script type="text/javascript">
+                (function () {
+                    var container = $('script').last().prev(), o;
+                    container.find('> .fixed-scroll > div').fixOnScroll(o = {
+                        fixedBottom: 15,
+                        boxHeight: function(){return container.height() - 15},
+                        boxTop: container.offset().top
+                    });
+                    //console && console.log('panel', container, o);
+                })();
+            </script>
+        
+        <div class="panel-1245 crop ">
+        <div class="fixed-scroll left-column w1u">
+            <div class="">
+                        <div id="side-column-0_3_left">
+            <div class="crop w1u h15 mb">    <div class="big-tab">
+        <ul class="header-line header-small-block">
+            
+                    <li class="title-left title-aqua-left">
+                        <div class="l_mask l_mask_aqua"></div>
+                        <a href="/auto/">ОБъявления</a>
+                        <!--<div class="header-line-bottom"></div>-->
+                        <div class="r_mask r_mask_aqua"></div>
+                    </li>
+            
+            
+            <li class="title-right title-orange-right">
+                <div class="l_mask l_mask_orange"></div>
+                <a href="/job/">Работа</a>
+                <!--<div class="header-line-bottom"></div>-->
+                <div class="r_mask r_mask_orange"></div>
+            </li>
+            
+
+
+
+        </ul>
+    </div>
+    </div>
+            <div class="crop w1u h1u mb">    <div class="section first"><div class="i-ad src-3"><a href="/auto/desk/view/306414"><img data-format="img143x66" data-section-id="1" src="/userpic/desk/2013/Jul/05/475395_img143x66.jpg"  class="round" width="143" height="66" /></a></div><a href="/auto/desk/view/306414">Nissan Tiida (2011г.) <strong>540</strong> т.р.</a></div><div class="section"><div class="i-ad src-3"><a href="/auto/desk/view/294188"><img data-format="img143x66" data-section-id="1" src="/userpic/desk/2013/May/27/408057_img143x66.jpg"  class="round" width="143" height="66" /></a></div><a href="/auto/desk/view/294188">ГАЗ 3302 (2005г.) <strong>265</strong> т.р.</a></div>    </div>
+            <div class="crop w1u h3u mb"><!--div class="banner">баннер  : 19009 : 300 x 330 найден</div--><div id="b-19009" data-id="19009" class="banner b19009 banner-300_x_330"><div class="b-inner"><a href="/route/?url=http://tomsk.ru/job/trainings/&amp;section=bstat&amp;rid=1097" target="_blank"><div class="b-image"><img src="/resources/content/f1368689813.jpg" style="" alt="" /></div></a></div></div></div>
+            <div class="crop w1u h1u mb">    <div class="section first"><div class="i-ad src-3"><a href="/auto/desk/view/305371"><img data-format="img143x66" data-section-id="1" src="/userpic/desk/2013/Jul/03/473304_img143x66.jpg"  class="round" width="143" height="66" /></a></div><a href="/auto/desk/view/305371">Lexus RX 300 (1999г.) <strong>550</strong> т.р.</a></div><div class="section"><div class="i-ad src-3"><a href="/auto/desk/view/307102"><img data-format="img143x66" data-section-id="1" src="/userpic/desk/2013/Jul/09/476826_img143x66.jpg"  class="round" width="143" height="66" /></a></div><a href="/auto/desk/view/307102">Volkswagen Jetta (2007г.) <strong>550</strong> т.р.</a></div>    </div>
+            <div class="crop w1u h15 mb">    <div class="big-tab">
+        <ul class="header-line header-small-block">
+            
+                    <li class="title-left title-aqua-left">
+                        <div class="l_mask l_mask_aqua"></div>
+                        <a href="/consultations/">Эксперты</a>
+                        <!--<div class="header-line-bottom"></div>-->
+                        <div class="r_mask r_mask_aqua"></div>
+                    </li>
+            
+            
+            <li class="title-right title-orange-right">
+                <div class="l_mask l_mask_orange"></div>
+                <a href="/auto/">Объявления Авто</a>
+                <!--<div class="header-line-bottom"></div>-->
+                <div class="r_mask r_mask_orange"></div>
+            </li>
+            
+
+
+
+        </ul>
+    </div>
+    </div>
+            <div class="crop w1u h2u mb">        <div class="crop w1u h1u mb"></div>
+        <div class="crop w1u h1u mb"><div class="float h1u w1u mb"><div class="sect-dbl first"><a href="/consultations/view/104/"><img data-format="img143x66" data-section-id="5" src="/userpic/avatar/2013/Apr/23/392183_img143x66.jpg"  class="round" border="0" width="143" height="66" alt="Оценка стоимости ущерба причиненного автомобилю в ДТП и стоимости восстановительного ремонта" /></a></div><div class="sect-dbl"><div class="half-line"><a href="/consultations/view/104/"><b>Оценка стоимости ущерба причиненного автомобилю в ДТП и стоимости восстановительного ремонта</b></a></div><div class="half-line"><a class="link-btn" href="/consultations/view/104/">Ответы (2)</a><br /><a class="link-btn" href="/consultations/view/104/?ask=1">Задать вопрос</a></div></div><div class="line clear">На вопросы, касающиеся оценки стоимости ущерба причиненного автомобилю в ДТП и стоимости восстановительного ремонта, а также как получить реальную сумму со страховой компании, ответит Кузнецов Денис Николаевич, директор, оценщик, автоэксперт,<a href="/route/?url=/directory/object/9888&amp;section=cons" target="_blank">ЮА "ООО "Судебная Лаборатория Экспертизы и Оценки"</a> </div></div></div>
+        </div>
+            <!--div class="crop w1u h15 mb"></div>
+        <div class="crop w1u h1u mb"></div-->
+        </div>
+                </div>
+        </div>
+        <div id="body-content-0_3" class="body-content w4u-dynamic ">
+                    <div class="crop w4u-dynamic h15 mb">    <div class="h15 big-tab mb w4u-dynamic header-line header-red">
+        <ul class="header-line header-menu">
+                        <li class="odd active">
+            <a  href="/">Подробнее о вакансии</a><div class="angle"></div></li>        </ul>
+        <div class="red-line"></div>
+    </div>
+    </div>
+
+        <div class="w4u-dynamic h7plus mb">
+            <div class="float w2u mb mr"><!-- cache set render_246_0_3_body_full_0 --><div class="clear"></div><div class="w2u jobdesc"><div><h3 class="th3">Вакансия: Вахта Север. Водители С, Д, Е<br> З/п: от 80 000р.  </h3><div class="clear row"><div class="lrow f-left">Должность: </div><div class="rrow ">Вахта Север. Водители С, Д, Е</div></div><div class="clear row"><div class="lrow f-left">Cфера деятельности: </div><div class="rrow ">Транспорт экспедиция автобизнес</div></div><div class="clear row"><div class="lrow f-left">Зарплата: </div><div class="rrow ">от 80 000р. </div></div><div class="clear row dark">Условия работы:</div><div class="clear row"><div class="add_option">Премии</div><div class="add_option">Соц. пакет</div></div><div class="clear row dark">Дополнительная информация: </div><div class="clear row">В крупную организацию требуются водители С,Д.Е . Вахта. Томская, Тюменская область, график работы 15/15 либо 30/30. Проезд, проживание и питание за счёт организации. Официальное трудоустройство, соц. пакет , з/п. без задержек.</div><div class="clear row dark">Организация: </div><div class="clear row"><div style="margin-top: 6px;" class="line-bottom"><div>Имя: Томский Центр Вакансий</div><div>Email: <span class="contacts"><a href="mailto:tomsk-vacancy@mail.ru" >tomsk-vacancy@mail.ru</a></span></div><div>Телефон: <span class="contacts">8923-409-41-25</span></div></div></div></div></div><div class="clear"><!-- api vkontakte -->
+<script type="text/javascript">
+  VK.init({apiId: 3772652, onlyWidgets: true});
+</script>
+
+
+<!-- api facebook -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=397385417040161";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script><div id="vk_like" class="fll"></div>
+                    <script type="text/javascript">
+                    VK.Widgets.Like("vk_like", {type: "full", width: 130});
+                    </script><div class="fll"><fb:like href="http://tomsk.ru//job/desk/view/328157" send="false" layout="button_count" width="100" show_faces="true" font="tahoma"></fb:like></div><div class="clear"><table class="social" style="">
+	<tr>
+		<td>Поделиться с друзьями: </td>
+		<td>
+    		<a onclick="window.open('/route/?url=http%3A%2F%2Fvkontakte.ru%2Fshare.php%3Furl%3Dhttp%3A%2F%2Fwww.tomsk.ru%2Fjob%2Fdesk%2Fview%2F328157&section=desk&rid=10001', 'ВКонтакте', 'width=626, height=436'); return false;" rel="nofollow"
+    		href="/route/?url=http%3A%2F%2Fvkontakte.ru%2Fshare.php%3Furl%3Dhttp%3A%2F%2Fwww.tomsk.ru%2Fjob%2Fdesk%2Fview%2F328157&section=desk&rid=10001http://vkontakte.ru/share.php?url=http://www.tomsk.ru/job/desk/view/328157">
+    		<img src="/images/social/vk.png"></img></a>
+    	</td>
+		<td>
+    		<a onclick="window.open('/route/?url=http%3A%2F%2Ffacebook.com%2Fsharer.php%3Fu%3Dhttp%3A%2F%2Fwww.tomsk.ru%2Fjob%2Fdesk%2Fview%2F328157&section=desk&rid=10002', 'Facebook', 'width=626, height=436'); return false;" rel="nofollow"
+    		href="/route/?url=http%3A%2F%2Ffacebook.com%2Fsharer.php%3Fu%3Dhttp%3A%2F%2Fwww.tomsk.ru%2Fjob%2Fdesk%2Fview%2F328157&section=desk&rid=10002http://facebook.com/sharer.php?u=http://www.tomsk.ru/job/desk/view/328157">
+    		<img src="/images/social/fb.png"></img></a>
+    	</td>
+		<td>
+    		<a onclick="window.open('/route/?url=http%3A%2F%2Ftwitter.com%2Fshare%2F&section=desk&rid=10003', 'Twitter', 'width=626, height=436'); return false;" rel="nofollow"
+    		href="/route/?url=http%3A%2F%2Ftwitter.com%2Fshare%2F&section=desk&rid=10003http://twitter.com/share">
+    		<img src="/images/social/tw.png"></img></a>
+    	</td>
+		<td>
+    		<a onclick="ODKL.Share(this); return false;" href="http://www.tomsk.ru/job/desk/view/328157">
+    		<img src="/images/social/od.png"></img></a>
+    	</td>
+	</tr>
+</table></div></div></div>
+
+            <div style="margin-left: 630px" class="crop col-3-4 fixed-scroll w2u h7plus">
+                <div class="crop col-4 float w1u">
+                    <div class="crop w1u h2u mb">        <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/328538"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519656_img56x26.jpg"  class="round" width="56" height="26" alt="171714" /></a><span class="f-right">10000 руб.</span><a href="/desk/view/328538">Набор на курсы компьютерной графики: 3d max, web/ game, графический дизайн, Unity.</a></div><div class="line"><a href="/desk/view/328525"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519597_img56x26.jpg"  class="round" width="56" height="26" alt="171703" /></a><span class="f-right">0 руб.</span><a href="/desk/view/328525">Зум, брутальный котяра</a></div><div class="line"><a href="/desk/view/328523"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519596_img56x26.jpg"  class="round" width="56" height="26" alt="171702" /></a><span class="f-right">0 руб.</span><a href="/desk/view/328523">Морковка, щенок девочка</a></div></div></div>
+        <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/328435"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519331_img56x26.jpg"  class="round" width="56" height="26" alt="171600" /></a><span class="f-right">0 руб.</span><a href="/desk/view/328435">Озорные щеники</a></div><div class="line"><a href="/desk/view/328425"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519305_img56x26.jpg"  class="round" width="56" height="26" alt="171589" /></a><span class="f-right">500 руб.</span><a href="/desk/view/328425">продам Philips Saon Multistylist</a></div><div class="line"><a href="/desk/view/328422"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519297_img56x26.jpg"  class="round" width="56" height="26" alt="171588" /></a><span class="f-right">200 руб.</span><a href="/desk/view/328422">Продам фиалки</a></div></div></div>
+        </div>
+                    <div class="crop w1u h2u mb">        <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/328268"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519103_img56x26.jpg"  class="round" width="56" height="26" alt="171512" /></a><span class="f-right">0 руб.</span><a href="/desk/view/328268">Аурика, кошка подросток</a></div><div class="line"><a href="/desk/view/328267"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519094_img56x26.jpg"  class="round" width="56" height="26" alt="171511" /></a><span class="f-right">0 руб.</span><a href="/desk/view/328267">Коты и кошки на любой вкус!</a></div><div class="line"><a href="/desk/view/328236"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519070_img56x26.jpg"  class="round" width="56" height="26" alt="171498" /></a><span class="f-right">0 руб.</span><a href="/desk/view/328236">Собака-улыбака</a></div></div></div>
+        <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/328229"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519056_img56x26.jpg"  class="round" width="56" height="26" alt="171494" /></a><span class="f-right">0 руб.</span><a href="/desk/view/328229">Белатрисс</a></div><div class="line"><a href="/desk/view/328223"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519047_img56x26.jpg"  class="round" width="56" height="26" alt="171487" /></a><span class="f-right">149000 руб.</span><a href="/desk/view/328223">Комплект бурового оборудования</a></div><div class="line"><a href="/desk/view/328222"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519046_img56x26.jpg"  class="round" width="56" height="26" alt="171486" /></a><span class="f-right">125000 руб.</span><a href="/desk/view/328222">Буровая установка на воду AKVABUR-B6</a></div></div></div>
+        </div>
+                    <div class="crop float w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/327607"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/25/518024_img56x26.jpg"  class="round" width="56" height="26" alt="171112" /></a><span class="f-right">0 руб.</span><a href="/desk/view/327607">Вышивка на заказ. Детские метрики и многое другое</a></div><div class="line"><a href="/desk/view/327554"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/25/517888_img56x26.jpg"  class="round" width="56" height="26" alt="171059" /></a><span class="f-right">0 руб.</span><a href="/desk/view/327554">Поможем вернуть водительские права</a></div><div class="line"><a href="/desk/view/327539"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/25/517873_img56x26.jpg"  class="round" width="56" height="26" alt="171048" /></a><span class="f-right">4000 руб.</span><a href="/desk/view/327539">Продам металлическую кровать МИННЕН (Икея)</a></div></div></div>
+                    <div class="crop float w1u h15 mb">    <div class="big-tab">
+        <ul class="header-line header-small-block">
+            
+                    <li class="title-left title-aqua-left">
+                        <div class="l_mask l_mask_aqua"></div>
+                        <a href="/desk/">Объявления</a>
+                        <!--<div class="header-line-bottom"></div>-->
+                        <div class="r_mask r_mask_aqua"></div>
+                    </li>
+            
+            
+            <li class="title-right title-orange-right">
+                <div class="l_mask l_mask_orange"></div>
+                <a href="/desk/">Объявления</a>
+                <!--<div class="header-line-bottom"></div>-->
+                <div class="r_mask r_mask_orange"></div>
+            </li>
+            
+
+
+
+        </ul>
+    </div>
+    </div>
+                    <div class="crop float w1u h2u mb">        <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/327420"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/25/517797_img56x26.jpg"  class="round" width="56" height="26" alt="171002" /></a><span class="f-right">8500 руб.</span><a href="/desk/view/327420">StarLine B94 Dialog CAN</a></div><div class="line"><a href="/desk/view/327418"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/25/517796_img56x26.jpg"  class="round" width="56" height="26" alt="171001" /></a><span class="f-right">0 руб.</span><a href="/desk/view/327418">Василиса-краса</a></div><div class="line"><a href="/desk/view/327400"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/25/517787_img56x26.jpg"  class="round" width="56" height="26" alt="170995" /></a><span class="f-right">0 руб.</span><a href="/desk/view/327400">ПИАНИНО  РОЯЛЬ ТОМСК ПОДЪЕМ СПУСК ТРАНСПОРТИРОВКА</a></div></div></div>
+        <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/327397"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/24/517777_img56x26.jpg"  class="round" width="56" height="26" alt="170993" /></a><span class="f-right">10000 руб.</span><a href="/desk/view/327397">Google Nexus 7 32GB 3G</a></div><div class="line"><a href="/desk/view/327385"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/24/517751_img56x26.jpg"  class="round" width="56" height="26" alt="170980" /></a><span class="f-right">1500 руб.</span><a href="/desk/view/327385">Продам телевизор!!!</a></div><div class="line"><a href="/desk/view/327373"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/24/517697_img56x26.jpg"  class="round" width="56" height="26" alt="170966" /></a><span class="f-right">3000 руб.</span><a href="/desk/view/327373">Щенки овчарки</a></div></div></div>
+        </div>
+                </div>
+
+                <div class="crop col-5 float w1u ml">
+                    <div class="crop w1u h2u mb">        <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/328218"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519042_img56x26.jpg"  class="round" width="56" height="26" alt="171482" /></a><span class="f-right">190000 руб.</span><a href="/desk/view/328218">Буровая гидравлическая установка</a></div><div class="line"><a href="/desk/view/328195"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/26/518976_img56x26.jpg"  class="round" width="56" height="26" alt="171458" /></a><span class="f-right">4200 руб.</span><a href="/desk/view/328195">Курсы флористики</a></div><div class="line"><a href="/desk/view/328167"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/26/518914_img56x26.jpg"  class="round" width="56" height="26" alt="171425" /></a><span class="f-right">3500 руб.</span><a href="/desk/view/328167">Продам сваи</a></div></div></div>
+        <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/328166"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/26/518913_img56x26.jpg"  class="round" width="56" height="26" alt="171423" /></a><span class="f-right">500 руб.</span><a href="/desk/view/328166">Продам глину</a></div><div class="line"><a href="/desk/view/328165"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/26/518908_img56x26.jpg"  class="round" width="56" height="26" alt="171421" /></a><span class="f-right">500 руб.</span><a href="/desk/view/328165">Продам песок (природный)</a></div><div class="line"><a href="/desk/view/327946"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/26/518502_img56x26.jpg"  class="round" width="56" height="26" alt="171298" /></a><span class="f-right">7000 руб.</span><a href="/desk/view/327946">Продам Asus eee PC 1215P</a></div></div></div>
+        </div>
+                    <div class="crop w1u h2u mb">        <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/327937"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/26/518490_img56x26.jpg"  class="round" width="56" height="26" alt="171294" /></a><span class="f-right">200 руб.</span><a href="/desk/view/327937">Срочная Компьютерная Помощь!</a></div><div class="line"><a href="/desk/view/327854"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/25/518398_img56x26.jpg"  class="round" width="56" height="26" alt="171261" /></a><span class="f-right">0 руб.</span><a href="/desk/view/327854">Плюшечка</a></div><div class="line"><a href="/desk/view/327696"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/25/518178_img56x26.jpg"  class="round" width="56" height="26" alt="171170" /></a><span class="f-right">3658 руб.</span><a href="/desk/view/327696">Худеющий,  программа Тайские IBS, Янхи можно быстро   похудеть.</a></div></div></div>
+        <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/327645"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/25/518091_img56x26.jpg"  class="round" width="56" height="26" alt="171134" /></a><span class="f-right">0 руб.</span><a href="/desk/view/327645">Нужна помощь щенку Гавриле</a></div><div class="line"><a href="/desk/view/327642"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/25/518084_img56x26.jpg"  class="round" width="56" height="26" alt="171132" /></a><span class="f-right">0 руб.</span><a href="/desk/view/327642">Котята 3 недели</a></div><div class="line"><a href="/desk/view/327614"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/25/518045_img56x26.jpg"  class="round" width="56" height="26" alt="171121" /></a><span class="f-right">290 руб.</span><a href="/desk/view/327614">Натяжные потолки</a></div></div></div>
+        </div>
+                    <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/327349"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/24/517656_img56x26.jpg"  class="round" width="56" height="26" alt="170943" /></a><span class="f-right">1 руб.</span><a href="/desk/view/327349">Ремонт шланга на гидроусилитель руля</a></div><div class="line"><a href="/desk/view/327348"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/24/517655_img56x26.jpg"  class="round" width="56" height="26" alt="170942" /></a><span class="f-right">1 руб.</span><a href="/desk/view/327348">Ремонт автокондиционерных шлангов</a></div><div class="line"><a href="/desk/view/327347"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/24/517654_img56x26.jpg"  class="round" width="56" height="26" alt="170941" /></a><span class="f-right">0 руб.</span><a href="/desk/view/327347">тормозные трубки</a></div></div></div>
+                    <div class="crop w1u h15 mb">    <div class="big-tab">
+        <ul class="header-line header-small-block">
+            
+                    <li class="title-left title-aqua-left">
+                        <div class="l_mask l_mask_aqua"></div>
+                        <a href="/desk/">Объявления</a>
+                        <!--<div class="header-line-bottom"></div>-->
+                        <div class="r_mask r_mask_aqua"></div>
+                    </li>
+            
+            
+            <li class="title-right title-orange-right">
+                <div class="l_mask l_mask_orange"></div>
+                <a href="/desk/">Объявления</a>
+                <!--<div class="header-line-bottom"></div>-->
+                <div class="r_mask r_mask_orange"></div>
+            </li>
+            
+
+
+
+        </ul>
+    </div>
+    </div>
+                    <div class="crop w1u h2u mb">        <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/327345"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/24/517652_img56x26.jpg"  class="round" width="56" height="26" alt="170939" /></a><span class="f-right">1 руб.</span><a href="/desk/view/327345">Ремонт и изготовление рукава высокого давления</a></div><div class="line"><a href="/desk/view/327240"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/24/517587_img56x26.jpg"  class="round" width="56" height="26" alt="170897" /></a><span class="f-right">50 руб.</span><a href="/desk/view/327240">Мозаика в Томске</a></div><div class="line"><a href="/desk/view/327086"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/24/517423_img56x26.jpg"  class="round" width="56" height="26" alt="170823" /></a><span class="f-right">0 руб.</span><a href="/desk/view/327086">СТО</a></div></div></div>
+        <div class="crop w1u h1u mb"><div class="w1u h1u"><div class="line"><a href="/desk/view/327076"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/27/519503_img56x26.jpg"  class="round" width="56" height="26" alt="171670" /></a><span class="f-right">0 руб.</span><a href="/desk/view/327076">Коллегия адвокатов</a></div><div class="line"><a href="/desk/view/327067"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/24/517385_img56x26.jpg"  class="round" width="56" height="26" alt="170810" /></a><span class="f-right">12000 руб.</span><a href="/desk/view/327067">Продам прихожую</a></div><div class="line"><a href="/desk/view/327063"><img data-format="img56x26" data-section-id="1" src="/userpic/desk/2013/Sep/24/517366_img56x26.jpg"  class="round" width="56" height="26" alt="170808" /></a><span class="f-right">2000 руб.</span><a href="/desk/view/327063">Продам материнскую плату с процессором</a></div></div></div>
+        </div>
+                </div>
+            </div>
+        </div>
+                    <script type="text/javascript">
+                (function () {
+                    var container = $('script').last().prev(),
+                        p = container.parent(), o;
+                    container.find('> .fixed-scroll').fixOnScroll(o = {
+                        fixedBottom: 15,
+                        boxHeight: function(){return p.height()},
+                        boxTop: p.offset().top
+                    });
+                    //console&&console.log('fullcolX8', container, p, o);
+                })();
+            </script>
+        
+            </div>
+        <div class="fixed-scroll right-column w1u">
+            <div class="">
+                        <div id="side-column-0_3_right">
+            <div class="crop w1u h15 mb">    <div class="big-tab">
+        <ul class="header-line header-small-block">
+            
+                    <li class="title-left title-aqua-left">
+                        <div class="l_mask l_mask_aqua"></div>
+                        <a href="/job/">Интересные статьи</a>
+                        <!--<div class="header-line-bottom"></div>-->
+                        <div class="r_mask r_mask_aqua"></div>
+                    </li>
+            
+            
+            <li class="title-right title-orange-right">
+                <div class="l_mask l_mask_orange"></div>
+                <a href="/job/">Поиск по сайту</a>
+                <!--<div class="header-line-bottom"></div>-->
+                <div class="r_mask r_mask_orange"></div>
+            </li>
+            
+
+
+
+        </ul>
+    </div>
+    </div>
+            <div class="crop w1u h1u mb"><!-- render-type: company -->    <div class="line">
+        <div class="comment-cnt"><a href="/news/view/77757#comments">3</a></div>        <a href="/news/view/77757"><img data-format="img56x26" data-section-id="12" src="/userpic/news/2013/Sep/27/519502_img56x26.jpg"  class="round" width="56" height="26" /></a>
+        <a href="/news/view/77757"><span class="article-date">27.09</span>&nbsp;Лесничие не сберегли леса</a>
+    </div>
+    <div class="line">
+        <div class="comment-cnt"><a href="/news/view/77737#comments">4</a></div>        <a href="/news/view/77737"><img data-format="img56x26" data-section-id="12" src="/userpic/news/2013/Sep/27/519158_img56x26.jpg"  class="round" width="56" height="26" /></a>
+        <a href="/news/view/77737"><span class="article-date">27.09</span>&nbsp;Работники аптек посоревнуются за победу</a>
+    </div>
+    <div class="line">
+        <div class="comment-cnt"><a href="/news/view/77726#comments">4</a></div>        <a href="/news/view/77726"><img data-format="img56x26" data-section-id="12" src="/userpic/news/2013/Sep/27/519090_img56x26.jpg"  class="round" width="56" height="26" /></a>
+        <a href="/news/view/77726"><span class="article-date">27.09</span>&nbsp;Почти половина пенсионеров Томской области продолжают работать</a>
+    </div>
+</div>
+            <div class="crop w1u h3u mb"><!--div class="banner">баннер  : 19011 : 300 x 330 найден</div--><div id="b-19011" data-id="19011" class="banner b19011 banner-300_x_330 frame"><div class="b-inner"><a href="/route/?url=news/grumbler&amp;section=bstat&amp;rid=1222" target="_blank"><div class="b-image"><img src="/resources/content/f1369979729.jpg" style="" alt="" /></div></a></div></div></div>
+            <div class="crop w1u h1u mb"><!-- render-type: company -->    <div class="line">
+                <a href="/news/view/77787"><img data-format="img56x26" data-section-id="12" src="/userpic/news/2013/Sep/27/519725_img56x26.jpg"  class="round" width="56" height="26" /></a>
+        <a href="/news/view/77787"><span class="article-date">27.09</span>&nbsp;Тайланд из Новосибирска, 21 900 руб</a>
+    </div>
+    <div class="line">
+                <a href="/news/view/77785"><img data-format="img56x26" data-section-id="12" src="/userpic/news/2013/Sep/27/519718_img56x26.jpg"  class="round" width="56" height="26" /></a>
+        <a href="/news/view/77785"><span class="article-date">27.09</span>&nbsp;ОАЭ из Новосибирска, 17 900 руб</a>
+    </div>
+    <div class="line">
+        <div class="comment-cnt"><a href="/news/view/77784#comments">1</a></div>        <a href="/news/view/77784"><img data-format="img56x26" data-section-id="12" src="/userpic/news/2013/Sep/27/519714_img56x26.jpg"  class="round" width="56" height="26" /></a>
+        <a href="/news/view/77784"><span class="article-date">27.09</span>&nbsp;Турция из Новосибирска, 11 900 руб</a>
+    </div>
+</div>
+            <div class="crop w1u h15 mb">    <div class="big-tab">
+        <ul class="header-line header-small-block">
+            
+                    <li class="title-left title-aqua-left">
+                        <div class="l_mask l_mask_aqua"></div>
+                        <a href="">Текущие курсы валют</a>
+                        <!--<div class="header-line-bottom"></div>-->
+                        <div class="r_mask r_mask_aqua"></div>
+                    </li>
+            
+            
+            <li class="title-right title-orange-right">
+                <div class="l_mask l_mask_orange"></div>
+                <a href="/relax/">Интересные статьи</a>
+                <!--<div class="header-line-bottom"></div>-->
+                <div class="r_mask r_mask_orange"></div>
+            </li>
+            
+
+
+
+        </ul>
+    </div>
+    </div>
+            <div class="crop w1u h2u mb"><div class="w1u h2u mb"><div class="linespec first"><div class="dir-string"><span class="fll">USD</span><span class="flr">32.3451 <span class="delta green"> 0.1715</span></span></div></div><div class="linespec "><div class="dir-string"><span class="fll">EUR</span><span class="flr">43.6497 <span class="delta green"> 0.1510</span></span></div></div><div class="linespec  first"><div class="dir-string"><span class="fll">AMD</span><span class="flr">79.7660 <span class="delta green"> 0.6182</span></span></div></div><div class="linespec "><div class="dir-string"><span class="fll">AUD</span><span class="flr">30.2168 <span class="delta red"> -0.0039</span></span></div></div><div class="linespec  first"><div class="dir-string"><span class="fll">AZN</span><span class="flr">41.2723 <span class="delta green"> 0.2188</span></span></div></div><div class="linespec "><div class="dir-string"><span class="fll">BGN</span><span class="flr">22.3177 <span class="delta green"> 0.0692</span></span></div></div><div class="linespec  first"><div class="dir-string"><span class="fll">BRL</span><span class="flr">14.4012 <span class="delta red"> -0.0109</span></span></div></div><div class="linespec "><div class="dir-string"><span class="fll">BYR</span><span class="flr">35.6028 <span class="delta green"> 0.1303</span></span></div></div><div class="linespec  first"><div class="dir-string"><span class="fll">CAD</span><span class="flr">31.3330 <span class="delta green"> 0.1389</span></span></div></div><div class="linespec "><div class="dir-string"><span class="fll">CHF</span><span class="flr">35.5675 <span class="delta green"> 0.1886</span></span></div></div><div class="linespec  first"><div class="dir-string"><span class="fll">CNY</span><span class="flr">52.8549 <span class="delta green"> 0.2733</span></span></div></div><div class="linespec "><div class="dir-string"><span class="fll">CZK</span><span class="flr">17.0027 <span class="delta green"> 0.1685</span></span></div></div><div class="linespec  first"><div class="dir-string"><span class="fll">DKK</span><span class="flr">58.5220 <span class="delta green"> 0.1752</span></span></div></div><div class="linespec "><div class="dir-string"><span class="fll">GBP</span><span class="flr">52.0174 <span class="delta green"> 0.2372</span></span></div></div><div class="linespec  first"><div class="dir-string"><span class="fll">HUF</span><span class="flr">14.5568 <span class="delta green"> 0.0282</span></span></div></div><div class="linespec "><div class="dir-string"><span class="fll">INR</span><span class="flr">52.2749 <span class="delta green"> 0.5405</span></span></div></div></div></div>
+            <!--div class="crop w1u h15 mb"></div>
+        <div class="crop w1u h1u mb"></div-->
+        </div>
+                </div>
+        </div>
+    </div>
+                    <script type="text/javascript">
+                (function () {
+                    var container = $('script').last().prev(), o;
+                    container.find('> .fixed-scroll > div').fixOnScroll(o = {
+                        fixedBottom: 15,
+                        boxHeight: function(){return container.height() - 15},
+                        boxTop: container.offset().top
+                    });
+                    //console && console.log('panel', container, o);
+                })();
+            </script>
+        
+        <div id="two-banners-0_4" class="panel-1245 clear" style="height:60px">
+            <!--div class="banner">баннер 0_4_left : 19012 : 468+ x 60 найден</div--><div id="b-19012" data-id="19012" class="banner b19012 banner-468p_x_60"><div class="b-inner"><div></div></div></div>
+            <!--div class="banner">баннер 0_4_right : 19013 : 468+ x 60 найден</div--><div id="b-19013" data-id="19013" class="banner b19013 banner-468p_x_60"><div class="b-inner"><div></div></div></div>    </div>
+    </div>
+    <div class="footer panel-1245 crop h1u">
+        <div class="left-column w1u h1u" style="color:#fff;">
+            <div>
+                <p class="bigger"><a href="/corp/">Корпоративный раздел</a></p>
+                <p>&copy; 1997 - 2013 Городской портал tomsk.ru</p>
+                <p style="white-space:nowrap">Ресурс принадлежит медиахолдингу <a target=_blank href="/route/?url=http://rde.ru&amp;section=main">"Рекламный дайджест"</a></p>
+                <br><p><nobr>Нашли ошибку в тексте? Выделите и нажмите <b style="color: #333; background-color: #eee;">&nbsp;Ctrl&nbsp;</b> + <b style="color: #333; background-color: #eee; ">&nbsp;Enter&nbsp;</b></nobr></p><br>
+            </div>
+        </div>
+
+
+        <div class="body-content w4u-dynamic h1u">
+            <div id="footertxt"></div>
+            			<div style="text-align:center; white-space
+			: nowrap; padding-top: 10px;">
+				<noindex>
+						<div style="display:inline;">
+		<span style="margin:0;padding:0" id="tbec">
+			<script type="text/javascript">
+			//<![CDATA[
+				$(document).ready(function(){
+					$.getScript("http://tbe.tom.ru/?a=tomsk.ru&js=1&c=6&s=8831&rnd="+(new Date().getTime()));
+				});
+			//]]>
+			</script>
+		</span>
+		<noscript><a rel="nofollow" href="/route/?url=http://tbe.tom.ru&amp;section=counters"><img src="http://tbe.tom.ru/?a=tomsk.ru&amp;c=6&amp;s=8831" alt="TBE" title="place hosts/hits users_online" style="border:0" /></a></noscript>
+	</div>
+					<!--	<script type="text/javascript">
+		var pkBaseURL = "/pstat/";
+		document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script type="text/javascript">
+		try {
+		var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+		piwikTracker.trackPageView();
+		piwikTracker.enableLinkTracking();
+		} catch( err ) {}
+	</script><noscript><p><img src="/pstat/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript>-->
+						<div style="display:inline;">
+		<!-- Catalog.Metka.Ru Counter Code Begin -->
+		<a rel="nofollow" href="/route/?url=http://catalog.metka.ru&amp;section=counters" target="_blank"><img src="http://catalog.metka.ru/counter/counter.php?id=1254117274&amp;im=7&amp;tp=1" alt="CATALOG.METKA.RU" width="88" height="31" /></a>
+		<!-- Catalog.Metka.Ru Counter Code End -->
+	</div>
+						<div style="display:inline;">
+		<a rel="nofollow" href="/route/?url=http://search.yaca.yandex.ru/yca/cy/ch/tomsk.ru&amp;section=counters" target="_blank"><img src="/images/cycounter.gif" width="88" height="31" alt="Яндекс цитирования" /></a>
+	</div>
+					<div style="display: inline"><img src="/images/18.png" width="52" height="32" alt="" /></div>
+				</noindex>
+			</div>
+        </div>
+
+        <div class="right-column w1u h1u" style="color:#fff">
+            <div>
+                <p class="bigger right"><a href="/corp/price/">Размещение рекламы</a> <span> т. 52-10-01 (доб. 360)</span></p>
+                <p>При использовании материалов, размещенных на портале,<br />
+                ссылка на http://www.tomsk.ru обязательна.</p>
+                
+            </div>
+        </div>
+
+    </div>
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter17598292 = new Ya.Metrika({id:17598292, enableAll: true, webvisor:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/17598292" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+</body>
+</html>

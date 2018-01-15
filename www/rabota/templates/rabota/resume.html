@@ -1,0 +1,29 @@
+{% extends "default.html" %}
+{% load cache pymorphy_tags %}
+{% load simpleblocks_tags %}
+
+{% block title %}{{ request.flatpage.get_title|default:"Резюме" }}{% endblock %}
+{% block description %}{{ request.flatpage.get_description|default:"Все резюме, вакансии и инструменты для поиска работы." }}{% endblock %}"
+{% block keywords %}{{ request.flatpage.get_keywords|default:"работа, вакансии, работа в томске, поиск вакансий, резюме, работы, работу, работ, ищу работу" }}{% endblock %}"
+
+{% block extra_media %}{% endblock %}
+
+{% block breadcrumb_item %}
+	<li class="active">Резюме{% if city %} в {{ city.name|inflect:"пр" }}{% endif %}</li>
+{% endblock %}
+
+{% block h1 %}{{ request.flatpage.get_title|default:"Резюме" }}{% endblock %}
+
+{% block content %}
+	<div class="container">
+		{% cache 3600 resume_list slug_city page %}
+			{% include "rabota/resume_rubric_list.html" %}
+			<div class="row-fluid">
+				<div class="span12">
+					{% include "rabota/resume_list.html" %}
+				</div>
+			</div>
+		{% endcache %}
+	</div>
+	{% get_simpleblock 'seo' %}
+{% endblock %}

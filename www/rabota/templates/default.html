@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+{% load simpleblocks_tags copyrigth_tags ibanners_tags %}
+
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="shortcut icon" href="{{ MEDIA_URL }}favicon.ico"></link> 
+		<link rel="icon" href="{{ MEDIA_URL }}favicon.ico"></link>
+		
+		<title>{% block title %}{{ request.flatpage.get_title }}{% endblock %}</title>
+		<meta name="description" content="{% block description %}{{ request.flatpage.get_description }}{% endblock %}" />
+		<meta name="keywords" content="{% block keywords %}{{ request.flatpage.get_keywords }}{% endblock %}" />
+		<meta name="author" content="http://web-aspect.ru">
+		
+		<meta name='yandex-verification' content='5069da3d12aa4efe' />
+		
+		<link rel="stylesheet" media="screen" href="{{ MEDIA_URL }}js/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{{ MEDIA_URL }}js/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" media="screen" href="{{ MEDIA_URL }}js/multiple-select-master/multiple-select.css">
+		<link rel="stylesheet" href="{{ MEDIA_URL }}css/default.css">
+		<!--[if lte IE 8]> <link href= "{{ MEDIA_URL }}css/ie7.css" rel= "stylesheet"/> <![endif]-->
+		
+		<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}js/bootstrap/js/bootstrap.min.js"></script>
+		<script src="{{ MEDIA_URL }}js/bootstrap/plugin/bootstrap-carousel.js"></script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}js/multiple-select-master/jquery.multiple.select.js"></script>
+		<script>
+			$(function(){
+				$('select[name="category"]').multipleSelect({selectAll:false, placeholder:'Раздел', 'maxHeight':150});
+			});
+		</script>
+		
+		{% block extra_media %}{% endblock %}
+		
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-32718314-4']);
+		  _gaq.push(['_setDomainName', 'delo70.ru']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+	</head>
+	
+	<body>
+		<div class="wraper">
+			<div class="navbar navbar navbar-static-top">
+				<div class="navbar-inner">
+					<div class="container">
+						<div>
+							<ul class="nav">
+								{% if request.user.is_authenticated %}
+									<li><a href="{% url auth_logout %}"><i class="icon-signout orange"></i>&nbsp;<span class="orange">Выйти</span></a></li>
+									<li class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user blue"></i>&nbsp;<span class="blue">Личный кабинет</span> <i class="blue caret"></i></a>
+										<ul class="dropdown-menu">
+											<li><a href="{% url account_profile username=request.user.username %}"><span>Профиль</span></a></li>
+											<li><a href="{% url account_vacancy username=request.user.username %}"><span>Мои вакансии</span></a></li>
+											<li><a href="{% url account_resume username=request.user.username %}"><span>Мои резюме</span></a></li>
+											<li><a href="{% url account_subscribe username=request.user.username %}"><span>Мои подписки</span></a></li>
+										</ul>
+									</li>
+								{% else %}
+									<li><a href="{% url auth_login %}" ><i class="icon-signin orange"></i>&nbsp;<span class="orange">Войти</span></a></li>
+									<li><a href="{% url registration_register %}"><i class="icon-lock blue"></i>&nbsp;<span class="blue">Регистрация</span></a></li>
+								{% endif %}
+								<li class="dropdown">
+									<form id="location" action="{% url geoip_change_location %}" method="post">{% csrf_token %}
+										<input name="next" type="hidden" value="/" />
+										<select name="location_id">
+											{% for location in LOCATIONS %}
+												<option value="{{ location.id }}" {% if request.location.id == location.id %}selected{% endif %}>{{ location.name }}</option>
+											{% endfor %}
+										</select>
+										<input type="submit" value="Сменить" />
+									</form>
+									<script>
+										function location_change(val){
+											$('#location option[value='+val+']').attr('selected', 'selected');
+											$('#location').submit();
+										}
+									</script>
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-map-marker orange"></i>&nbsp;<span class="orange">{% if request.location %}Выбран город {{ request.location.name }}{% else %}Выберите город{% endif %}</span> <i class="caret orange"></i></a>
+									<ul class="dropdown-menu orange">
+										{% for location in LOCATIONS %}
+											<li {% if request.location.id == location.id %}class="active"{% endif %}><a href="#" onclick="location_change({{ location.id }});return false;"><span>{{ location.name }}</span></a></li>
+										{% endfor %}
+									</ul>
+								</li>
+							</ul>
+						</div> 
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row-fluid">
+					<div class="span3">
+						<a class="brand" href="/" title="DELO70.RU - Вся работа в одном месте">DELO70.RU</a>
+					</div>
+					{% block search_all %}
+						<div id="block_search" class="span9">
+							<div class="row-fluid">
+								<ul class="inline">
+									<li {% ifequal active 1%}class="active"{% endifequal %}><a href="{% url index %}"><span>Главная</span></a></li>
+										
+									<li {% ifequal active 2%}class="active"{% endifequal %}><a href="{% url vacancy slug_city=request.location.slug %}"><span>Вакансии</span></a></li>
+									<li {% ifequal active 3%}class="active"{% endifequal %}><a href="{% url resume slug_city=request.location.slug %}"><span>Резюме</span></a></li>
+									
+									<li {% ifequal active 4%}class="active"{% endifequal %}><a href="{% url contacts %}"><span>Контакты</span></a></li>
+								</ul>
+								{% if request.user.is_authenticated %}
+									<ul class="inline pull-right">
+										<li {% ifequal account_active 1%}class="active"{% endifequal %}><a href="{% url account_profile username=request.user.username %}"><span>Профиль</span></a></li>
+										<li {% ifequal account_active 2%}class="active"{% endifequal %}><a href="{% url account_vacancy username=request.user.username %}"><span>Мои вакансии</span></a></li>
+										<li {% ifequal account_active 3%}class="active"{% endifequal %}><a href="{% url account_resume username=request.user.username %}"><span>Мои резюме</span></a></li>
+										<li {% ifequal account_active 4%}class="active"{% endifequal %}><a href="{% url account_subscribe username=request.user.username %}"><span>Мои подписки</span></a></li>
+									</ul>
+								{% endif %}
+							</div>
+							{% block search %}
+								<div class="row-fluid">
+									{% include "rabota/search_form.html" %}
+								</div>						
+							{% endblock %}
+						</div>
+					{% endblock %}
+				</div>
+			</div>
+			<div class="container">
+				<div class="row-fluid">
+					<ul class="action">
+						<li class="span3">
+							<div class="icon icon1"></div>
+							<a href="{% url vacancy_add slug_city=request.location.slug %}">Добавить вакансию</a><br/>
+							<small>Ваш сотрудник ищет Вас</small>
+						</li>
+						<li class="span3">
+							<div class="icon icon2"></div>
+							<a href="{% url resume_add slug_city=request.location.slug %}">Добавить резюме</a><br/>
+							<small>Здесь о Вас узнает работодатель</small>
+						</li>
+						<li class="span3">
+							<div class="icon icon3"></div>
+							<a href="{% url vacancy_subscribe_add %}">Добавить подписку на вакансии</a><br/>
+							<small>Узнай о вакансии первым</small>
+						</li>
+						<li class="span3">
+							<div class="icon icon4"></div>
+							<a href="{% url resume_subscribe_add %}">Добавить подписку на резюме</a><br/>
+							<small>Не упусти сотрудника</small>
+						</li>
+						<li class="clearfix"></li>
+					</ul>
+				</div>
+				{% block banners_top %}
+					<div class="row-fluid">
+						{% get_simpleblock 'banner_top_1' %}
+						{% get_simpleblock 'banner_top_2' %}
+						<div class="clr"></div>
+					</div>
+				{% endblock %}
+				{% block breadcrumb %}
+					<div class="block_item">
+						<ul class="breadcrumb">
+							<li><a href="/">Главная</a> <span class="divider">/</span></li>
+							{% block breadcrumb_item %}
+								<li class="active">{{ request.flatpage.get_title }}</li>
+							{% endblock %}
+						</ul>
+					</div>
+				{% endblock %}
+
+				<div class="container">
+					{% include "messages.html" %}
+				</div>
+				
+				{% block flatpage %}
+					<div class="dotted">
+						<h1>{% block h1 %}{{ request.flatpage.get_title }}{% endblock %}</h1>
+						<span class="bg_white for_btn pull-right"><a class="btn btn-success" href="{% url vacancy_add slug_city=request.location.slug %}">Добавить вакансию</a></span>
+						<a class="bg_white pull-right" href="{% url resume_add slug_city=request.location.slug %}"><small>Добавить резюме</small></a>
+					</div>
+					
+					{% if request.flatpage.get_content %}
+						<div class="block_item">{{ request.flatpage.get_content|safe }}</div>
+					{% endif %}
+				{% endblock %}
+
+				{% block content %}{% endblock %}
+				
+				<div class="row-fluid">
+					<div class="span12">
+						{{ linkzilla.all|safeseq|join:" " }}
+					</div>
+				</div>
+				
+				<div class="adsense">
+					{% banner request 7 %}
+				</div>
+				<div id="push"></div>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+				<div class="row-fluid">
+					<div class="span4">
+						<ul class="nav_list">
+							<li {% ifequal active 1%}class="active"{% endifequal %}><a href="{% url index %}"><span>Главная</span></a></li>
+								
+							<li {% ifequal active 2%}class="active"{% endifequal %}><a href="{% url vacancy slug_city=request.location.slug %}"><span>Вакансии</span></a></li>
+							<li {% ifequal active 3%}class="active"{% endifequal %}><a href="{% url resume slug_city=request.location.slug %}"><span>Резюме</span></a></li>
+							
+							<li {% ifequal active 4%}class="active"{% endifequal %}><a href="{% url contacts %}"><span>Контакты</span></a></li>
+						</ul>
+					</div>
+					<div class="span4 t_center">
+						Разработка сайта: <a href="http://web-aspect.ru" target="_blank">web-aspect.ru</a>
+					</div>
+					<div class="span4 t_right">
+						© {% get_copyright 2013 %}&nbsp;&nbsp;<a href="/">delo70.ru</a>&nbsp;&nbsp;Все права защищены.
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+			(function (d, w, c) {
+				(w[c] = w[c] || []).push(function() {
+					try {
+						w.yaCounter28160628 = new Ya.Metrika({
+							id:28160628,
+							webvisor:true
+						});
+					} catch(e) { }
+				});
+
+				var n = d.getElementsByTagName("script")[0],
+					s = d.createElement("script"),
+					f = function () { n.parentNode.insertBefore(s, n); };
+				s.type = "text/javascript";
+				s.async = true;
+				s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+				if (w.opera == "[object Opera]") {
+					d.addEventListener("DOMContentLoaded", f, false);
+				} else { f(); }
+			})(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="//mc.yandex.ru/watch/28160628" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+	</body>
+</html>

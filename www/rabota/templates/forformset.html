@@ -1,0 +1,52 @@
+
+{% if formset %}
+<div class="row-fluid">
+	{% for form in formset.forms %}
+		<div class="el_{{ forloop.counter }} {% if field.errors %}error{% endif %} row-fluid control-group" {% if not form.fio.value and not form.phone.value%}{% ifchanged form.fio.value and not form.phone.value %}{% else %}style="display:none"{% endifchanged %}{% endif %}>
+			<label  class="control-label"><strong>Риелтор{{ forloop.counter }}:</strong></label>
+			<div class="controls">
+				<hr style="margin-top:15px;"/>
+				<div class="row-fluid">
+					<div class="span4">
+						<label><strong>{{ form.fio.label }}</strong></label>
+						{{ form.fio }}
+						<label><strong>{{ form.phone.label }}</strong></label>
+						{{ form.phone }}
+						<label><strong>{{ form.post.label }}</strong></label>
+						{{ form.post }}
+					</div>
+					<div class="span8">
+						<div class="row_fluid">
+							<div class="span6">
+								<label><strong>{{ form.foto.label }}</strong></label>
+								{{ form.foto }}
+							</div>
+							<div class="span6">
+								<div class="control-group form-inline"><label class="checkbox">{{ form.DELETE }}<strong> Удалить</strong></label></div>
+								<div class="el_{{ forloop.counter }} control-group" {% if not forloop.last %}{% if form.fio.value and form.phone.value %}style="display:none"{% endif %}{% endif %}>
+									<i class="icon icon-plus"></i> <a class="button_add_form" href="el_{{ forloop.counter|add:'1' }}"> Добавить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
+				</div>
+				{% if forloop.last %}<hr/>{% endif %}
+			</div>
+		</div>
+	{% endfor %}
+	{{ formset.management_form }}		
+
+</div>
+{% endif %}
+
+<script>
+	$(function(){
+		$('.button_add_form').click(function(){
+			$(this).closest('div').hide();
+			var el = $(this).attr('href');
+			$('.'+el).show();
+			return false;
+		});
+	});
+</script>

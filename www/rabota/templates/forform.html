@@ -1,0 +1,19 @@
+{{ form.media }}
+{% if form.errors %}
+	<div class="alert alert-error">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<strong>Ошибка!</strong> {% if form.non_field_errors %}{{ form.non_field_errors }}{% else %}Исправьте ошибки и повторите попытку.{% endif %}
+	</div>
+{% endif %}
+
+{% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
+
+{% for field in form.visible_fields %}
+	<div class="control-group {% if field.errors %}error-block{% endif %}">
+		<label class="control-label" for="{{ field.id_for_label }}">{% if field.field.required %}<span style="color:red;">&nbsp;*</span>{% endif %} {{ field.label }}</label>
+		<div class="controls">
+			{% if field.errors %}<span class="help-inline">{{ field.errors }}</span><br/>{% endif %}
+			{{ field }}
+		</div>
+	</div>
+{% endfor %}

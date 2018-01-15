@@ -1,0 +1,42 @@
+{% extends "default.html" %}
+{% load pymorphy_tags %}
+{% block extra_media %}{% endblock %}
+
+{% block title %}{{ request.flatpage.get_title|default:"Расширенный поиск по резюме" }}{% endblock %}
+{% block description %}{{ request.flatpage.get_description|default:"Все резюме, вакансии и инструменты для поиска работы." }}{% endblock %}"
+{% block keywords %}{{ request.flatpage.get_keywords|default:"работа, вакансии, работа в томске, поиск вакансий, поиск резюме, резюме, работы, работу, работ, ищу работу" }}{% endblock %}"
+
+{% block breadcrumb_item %}
+	<li><a href="{% url resume slug_city=request.location.slug %}">Резюме{% if request.location %} в {{ request.location.name|inflect:"пр" }}{% endif %}</a> <span class="divider">/</span></li>
+	<li class="active">{{ request.flatpage.get_title|default:"Расширенный поиск по резюме" }}</li>
+{% endblock %}
+
+{% block h1 %}{{ request.flatpage.get_title|default:"Расширенный поиск по резюме" }}{% endblock %}
+
+{% block content %}
+	<div class="row-fluid">
+		<form action="{% url resume_search_advanced slug_city=request.location.slug %}" method="get">
+			{% csrf_token %}
+			{% include "rabota/form_add.html" %}
+			<input class="btn btn-success" type="submit" value="Искать">
+		</form>
+	</div>
+	<div class="row-fluid">
+		{% with paginator.count as len %}
+			{% if len%}
+				<h2>
+			{% else %}
+				<h2 class="t_center">
+			{% endif %}
+				{% if q %}По запросу "{{ q }}" в 
+				{% else %}В
+				{% endif %}			
+				категори{% if category.count == 1 %}и
+				{% else %}ях
+				{% endif %}				 
+				найдено {{ len }} {{ "резюме"|plural:len }}			
+			</h2>			
+			{% include "rabota/resume_list.html" %}
+		{% endwith%}
+	</div>
+{% endblock %}

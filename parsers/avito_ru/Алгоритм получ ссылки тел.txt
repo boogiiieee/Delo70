@@ -1,0 +1,23 @@
+$('#phone').find('a').click(function(){
+	var link,phoneKey = window.item_phone||'';
+	function phoneDemixer(key){
+		var pre=key.match(/[0-9a-f]+/g),mixed=(item.id%2===0?pre.reverse():pre).join(''),s=mixed.length,r='',k;
+		for(k=0;k<s;++k){
+			if(k%3===0){r+=mixed.substring(k,k+1);}
+		}
+		return r;
+	}
+	if(!phoneKey){return;}
+	link='/items/phone/'+item.url+'?pkey='+phoneDemixer(phoneKey);
+	$('#phone .phone').html('<img src="'+static_prefix+'/s/a/i/ic/ajax-loader.gif" class="loader" /> Идет загрузка...');
+	$('#phone .alert').show();
+	window.setTimeout(function(){$('#phone .phone').html('<img src="'+link+'" />');},1000);
+});
+
+item_url = 'tomsk_vakansii_trebuetsya_zav._pischevym_proizvodstvom_213788639', 
+item_phone = 'z2fea203b4zeb6fa6257zfd473d8863c7z690617b1df7055f4c5f5cz1f5za079d1471z80987czf681d324d67556a96bc4be029ef'
+
+key = z2fea203b4zeb6fa6257zfd473d8863c7z690617b1df7055f4c5f5cz1f5za079d1471z80987czf681d324d67556a96bc4be029ef
+item.id = 213788639
+	
+http://www.avito.ru/items/phone/tomsk_vakansii_trebuetsya_zav._pischevym_proizvodstvom_213788639?pkey=2a3ef2f78366bf54f1a9488f12659ce9

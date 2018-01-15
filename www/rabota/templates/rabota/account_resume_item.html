@@ -1,0 +1,21 @@
+{% extends "default.html" %}
+
+{% block title %}Редактировать резюме{% endblock %}
+
+{% block extra_media %}{% endblock %}
+
+{% block breadcrumb_item %}
+	<li><a href="{% url account_resume username=request.user.username %}">Мои резюме</a> <span class="divider">/</span></li>
+	<li class="active">Редактировать резюме</li>
+{% endblock %}
+
+{% block h1 %}Редактировать резюме{% endblock %}
+
+{% block content %}
+	<div class="row-fluid">
+		<form class="form add" action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+			{% include "rabota/form_add.html" %}
+			<input class="btn btn-success" type="submit" value="Сохранить">
+		</form>
+	</div>
+{% endblock %}

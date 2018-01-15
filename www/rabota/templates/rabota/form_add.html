@@ -1,0 +1,89 @@
+{% load forms_tags %}
+{% load widget_tweaks %}
+{% if form.errors %}
+	<div class="alert alert-error">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<strong>Форма заполнена неправильно. Исправьте ошибки и повторите попытку.</strong> 
+	</div>
+{% endif %}
+
+{% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
+{% if form.fieldsets %}
+	{% for block in form.fieldsets %}
+		{% if block.0 %}
+			<h2>
+				{{ block.0 }} 
+			</h2>
+		{% endif %}
+		<div>
+			<table class="table bg_table">
+				<tbody>
+					{% for row in block.1.fields %}
+						{% if form|has_visible_fields:row %}
+							<tr>
+								<td>
+						{% endif %}
+								<div class="form-row clearfix">
+									{% if row|is_tuple %}
+										{% for col in row %}
+											{% with form|form_filed:col as field %}
+												{% if field %}
+													<div class="field-box span3 {% if field.errors %}error-block{% endif %}">
+														<div>
+															{% if field.label or field.field.required %}<label class="control-label help-inline"  for="{{ field.id_for_label }}">{% if field.field.required %}<span class="error">*</span>{% endif %}{% if field.label %}{{ field.label }}:{% endif %}</label>{% endif %}
+															{% if field.errors %}<span class="help-inline error">{{ field.errors }}</span>{% endif %}
+														</div>
+														{{ field|add_class:'span12' }}
+														
+														{% if field.help_text %}<span class="help-inline">{{ field.help_text }}</span>{% endif %}
+													</div>
+												{% endif %}
+												
+											{% endwith %}
+										{% endfor %}
+									{% else %}
+										{% with form|form_filed:row as field %}
+											{% if field %}
+												<div class="{% if field.errors %}error-block{% endif %}">
+													<div>
+														{% if field.label or field.field.required %}<label class="control-label help-inline"  for="{{ field.id_for_label }}">{% if field.field.required %}<span class="error">*</span>{% endif %}{% if field.label %}{{ field.label }}:{% endif %}</label>{% endif %}
+														{% if field.errors %}<span class="help-inline error">{{ field.errors }}</span>{% endif %}
+													</div>
+													{{ field }}
+													
+													{% if field.help_text %}<span class="help-inline">{{ field.help_text }}</span>{% endif %}
+												</div>
+											{% endif %}
+										{% endwith %}
+									{% endif %}
+								</div>
+						{% if form|has_visible_fields:row %}
+								</td>
+							</tr>
+						{% endif %}
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	{% endfor %}
+{% else %}
+<table class="table bg_table">
+	{% for field in form.visible_fields %}
+		{% if forloop.counter0|divisibleby:"2" %}
+			<tr><td>
+		{% endif %}
+			<div class="field-box span6 {% if field.errors %}error-block{% endif %}">
+				<div>
+					{% if field.label or field.field.required %}<label class="control-label help-inline"  for="{{ field.id_for_label }}">{% if field.field.required %}<span class="error">*</span>{% endif %}{% if field.label %}{{ field.label }}:{% endif %}</label>{% endif %}
+					{% if field.errors %}<span class="help-inline error">{{ field.errors }}</span>{% endif %}
+				</div>
+				{{ field }}
+			</div>
+		{% if forloop.counter|divisibleby:"2" or forloop.last %}
+			</td></tr>
+		{% endif %}
+	{% endfor %}
+</table>
+{% endif %}
+
+

@@ -1,0 +1,36 @@
+{% extends "default.html" %}
+
+{% load thumbnail %}
+
+{% block content %}
+	{% if news_list %}
+		<div class="row-fluid news_item">
+			{% for item in news_list %}
+				{% if forloop.counter0|divisibleby:2 %}<div class="row-fluid margin_b">{% endif %}
+					<div class="span6">
+						{% if item.get_image %}
+							<div  class="pull-left">
+								{% thumbnail item.get_image "80x80" crop="center" format="PNG" as im %}
+									<a href="{{ item.get_item_url }}" title="{{ item.get_title }}"><img class="margin_min_r" src="{{ im.url }}" alt="{{ item.get_title }}" /></a>
+								{% endthumbnail %}
+							</div>
+						{% endif %}
+						{% if item.get_announcement %}
+							<div class="pull-right"><time class="pull-right margin_min_l" datetime="{{ item.get_created_at|date:"Y-m-d" }}">{{ item.get_created_at|date:"d/m/Y" }}</time></div>
+							<h3><a href="{{ item.get_item_url }}" title="{{ item.get_title }}">{{ item.get_title }}</a></h3>
+							<p class="small">{{ item.get_announcement|striptags }} <a href="{{ item.get_item_url }}" title="подробнее">...</a></p>
+						{% endif %}
+						<div class="clearfix"></div>
+						{% if not forloop.last %}
+							{% ifnotequal  forloop.revcounter0 1 %}
+								<hr>
+							{% endifnotequal %}
+						{% endif %}
+					</div>
+				{% if forloop.counter|divisibleby:2 or forloop.last %}</div>{% endif %}
+			{% endfor %}
+		</div>
+		<div class="clearfix"></div>
+		{% include "paginate.html" %}
+	{% endif %}
+{% endblock %}

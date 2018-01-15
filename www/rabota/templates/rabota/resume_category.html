@@ -1,0 +1,30 @@
+{% extends "default.html" %}
+{% load cache pymorphy_tags %}
+{% block title %}{% if ct.get_meta_title %}{{ ct.get_meta_title }}{% else %}{{ ct.get_title }}{% endif %}{% endblock %}
+{% block description %}{% if ct.get_meta_description %}{{ ct.get_meta_description }}{% endif %}{% endblock %}
+{% block keywords %}{% if ct.get_meta_keywords %}{{ ct.get_meta_keywords }}{% endif %}{% endblock %}
+
+{% block extra_media %}{% endblock %}
+
+{% block breadcrumb_item %}
+	<li><a href="{% url resume slug_city=city.slug %}">Резюме в {{ city.name|inflect:"пр" }}</a> <span class="divider">/</span></li>
+	<li class="active">{{ ct.get_title }}</li>
+{% endblock %}
+
+{% block h1 %}{{ ct.get_title }}{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span12">
+				{% block vacancy_list %}
+					{% cache 3600 resume_category slug_city page ct %}
+						{% include "rabota/resume_list.html" %}
+					{% endcache %}
+				{% endblock %}
+			</div>
+		</div>
+		<div class="dotted">&nbsp;</div>
+		{% include "rabota/resume_rubric_list.html" %}
+	</div>
+{% endblock %}

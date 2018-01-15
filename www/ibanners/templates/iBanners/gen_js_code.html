@@ -1,0 +1,10 @@
+<script>
+$().ready(function () {
+var script = document.createElement("script");
+script.type  = "text/javascript";
+{% if alt %}script.src = "{{ alt }}";{% endif %}
+{% if html_text %}script.text = "{% filter escapejs %}{{ banner_code }}{% endfilter %}";{% endif %}
+//document.getElementById('zone_{{ zone_id }}').appendChild(script);
+document.getElementsByTagName('head')[0].appendChild(script);
+});
+</script>

@@ -1,0 +1,21 @@
+{% load thumbnail news_tags %}
+
+{% get_news_list %}
+		{% if news_list_tag %}
+			<div class="row-fluid news">
+				<h4>Новости</h4>
+				<ul>
+				{% for item in news_list_tag %}
+					<li>
+						<span>{{ item.get_created_at|date:"d.m.Y" }}</span><br/>
+						<a href="{{ item.get_item_url }}" title="{{ item.get_title }}">{{ item.get_title }}</a>
+						{% if item.get_announcement %}
+							<div>{{ item.get_announcement|striptags|truncatechars:'180' }}</div>
+						{% endif %}
+						<a href="{{ item.get_item_url }}" title="Подробнее">Подробнее...</a>
+					</li>
+				{% endfor %}
+				</ul>
+				<p><a href="/news/">Все новости</a></p>
+			</div>
+		{% endif %}

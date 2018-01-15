@@ -1,0 +1,127 @@
+{% extends "default.html" %}
+{% load complaint_tags pymorphy_tags rabota_tags %}
+
+{% block title %}Вакансия на должность {{ item.get_post }}{% endblock %}
+{% block description %}{% endblock %}
+{% block keywords %}{% endblock %}
+
+{% load thumbnail %}
+
+{% block extra_media %}{% get_comlaint_js %}{% endblock %}
+
+{% block breadcrumb_item %}
+	<li><a href="{% url vacancy slug_city=city.slug %}">Вакансии в {{ city.name|inflect:"пр" }}</a> <span class="divider">/</span></li>
+	{% if ct %}<li><a href="{{ ct|get_category_vacancy_absolut_url:city.slug }}">{{ ct.get_title }}</a> <span class="divider">/</span></li>{% endif %}
+	<li class="active">{{ item.get_post }}</li>
+{% endblock %}
+
+{% block h1 %}{{ item.get_post|truncatechars:60 }}{% endblock %}
+
+
+{% block content %}
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span12 well">
+				<div class="row-fluid">
+					<div class="span3">
+						<small><strong>Уровень зарплаты</strong></small>
+						<div class="black"><strong>{{ item.get_wage }}</strong></div>
+					</div>
+					<div class="span3">
+						<small>Требуемый опыт</small>
+						<div class="black">{{ item.experience|default:"не указан" }}</div>
+					</div>
+					<div class="span3">
+						<small>График работы</small>
+						<div class="black">{{ item.schedule|default:"не указан" }}</div>
+					</div>
+					{% if item.logo %}
+						<div class="span3 t_center">
+							{% thumbnail item.logo "x40" as im %}
+								<img src="{{ im.url }}" alt="{{ item.company }}" />
+							{% endthumbnail %}
+							<div class="clearfix"></div>
+						</div>
+					{% else %}
+						<div class="span3">
+							<small>Тип занятости</small>
+							<div class="black">{{ item.type_employment|default:"не указан" }}</div>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span6">
+				<h2>Описание вакансии</h2>
+				{{ item.description|linebreaksbr }}
+			</div>
+			<div class="span6">
+				<h2>О работодателе</h2>
+				<ul>
+					{% if item.company %}
+						<li><strong>Название компании:</strong> {{ item.company }}</li>
+					{% endif %}
+					{% if item.fio %}
+						<li><strong>Контактное лицо:</strong>  <span class="fio">{{ item.fio }}</span> </li>
+					{% endif %}
+					{% if item.email %}
+						<li><strong>E-mail:</strong> {{ item.email }}</li>
+					{% endif %}
+					{% if item.get_phones %}
+						<li><strong>Телефоны:</strong> {{ item.get_phones }} </li>
+					{% endif %}
+					{% if item.icq %}
+						<li><strong>ICQ:</strong> {{ item.icq }}</li>
+					{% endif %}
+					{% if item.skype %}
+						<li><strong>Skype:</strong> {{ item.skype }}</li>
+					{% endif %}
+					{% if item.get_address %}
+						<li><strong>Адрес:</strong> {{ item.get_address }}</li>
+					{% endif %}
+					{% if item.area %}
+						<li><strong>Район:</strong> {{ item.area }}</li>
+					{% endif %}
+					
+				</ul>
+			</div>
+		</div>
+		{% if item.education or item.experience or item.schedule or item.type_employment or item.professional_skills %}
+		<hr/>
+		<div class="row-fluid">
+			<div class="span12">
+				<h2>Требования к соискателю</h2>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span6">
+				<ul>
+					{% if item.education %}
+						<li><strong>Образование:</strong> {{ item.education }}</li>
+					{% endif %}
+					{% if item.experience %}
+						<li><strong>Стаж:</strong> {{ item.experience }} </li>
+					{% endif %}
+					{% if item.schedule %}
+						<li><strong>График работы:</strong> {{ item.schedule }}</li>
+					{% endif %}
+					{% if item.type_employment %}
+						<li><strong>Тип занятости:</strong> {{ item.type_employment }} </li>
+					{% endif %}
+					
+				</ul>
+			</div>
+			{% if item.professional_skills %}
+				<div class="span6">
+					<ul>
+						<li><strong>Навыки и опыт работы:</strong> {{ item.professional_skills }}</li>
+					</ul>
+				</div>
+			{% endif %}
+		</div>
+		{% endif %}
+		{% get_complaint %}
+	</div>
+{% endblock %}
+

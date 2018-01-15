@@ -1,0 +1,204 @@
+{% extends "default.html" %}
+{% load cache pymorphy_tags %}
+{% load simpleblocks_tags rabota_tags news_tags %}
+
+{% block flatpage %}{% endblock %}
+
+{% block extra_media %}{% endblock %}
+
+{% block banners_top %}{% endblock %}
+
+{% block breadcrumb %}{% endblock %}
+
+{% block content %}
+	{% cache 3600 index_joke request.location.slug %}
+		<div class="block_item">
+			<div class="row-fluid">
+				<div class="span4">
+					<div class="icon icon_globe"></div>
+					<h7>Все рабовладельцы и рабы в одном месте</h7>
+					<p>
+						Все вакансии и резюме города для Вас собраны в одном месте
+					</p>
+				</div>
+				<div class="span4">
+					<div class="icon icon_free"></div>
+					<h7>ВСЁ абсолютно бесплатно</h7>
+					<p>Пользование сервисом не требует никаких затрат. Он абсолютно бесплатен</p>
+				</div>
+				<div class="span4">
+					 <div class="icon icon_pensil"></div>
+					 <h7>Подписки на рабов и рабовладельцев</h7>
+					 <p>Подпишись и ты не упустишь свою работу или работника</p>
+				</div>
+				</div>
+			</div>
+		<div class="dotted">
+			<h1>Новые рабовладельцы {{ request.location.name|inflect:"рд" }}</h1>
+			{% include "link_add.html" %}
+		</div>
+		<div class="row-fluid last_vacancy">
+			{% for list in last_vacancy %}
+				<div class="span6">
+					{% for item in list %}
+						<div {% if item.order < -999 %}class="up_item"{% endif %}>
+							<div class="block_info pull-right">
+								<div class="row-fluid">
+									<div class="span5 t_right">Дата:&nbsp;</div>
+									<div class="span7 black">{{ item.created|date:"d.m.Y" }}</div>
+								</div>
+								{% if item.wage_min or item.wage_max %}
+									<div class="row-fluid">
+										<div class="span5 t_right">Зарплата:&nbsp;</div>
+										<div class="span7 black">{% if item.wage_min %}от {{ item.wage_min }}{% else %}{% if item.wage_max %}до {{ item.wage_max }}{% endif%}{% endif%} руб.</div>
+									</div>
+								{% endif %}
+							</div>
+							<div class="media-body">
+								<h3><a href="{{ item.get_absolute_url }}">{{ item }}</a></h3>
+								<p>
+									{{ item.brief|truncatechars:60 }}
+								</p>
+							</div>
+							{% if not forloop.last %}<div  class="clearfix"></div><hr/>{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+			{% empty %}
+				Нет вакансий.
+			{% endfor %}
+		</div>
+		<div class="dotted">
+			<a class="bg_white pull-right" href="{% url vacancy slug_city=request.location.slug %}"><small>посмотреть все вакансии</small></a>
+			<div class="clearfix"></div>
+		</div>
+		
+		<div class="block_item" style="text-align:center">
+			<noindex>
+				<a class="soc_ico" href="http://vkontakte.ru/share.php?url=http://www.joke.delo70.ru&amp;title=Полный список рабов и рабовладельцев Вашего города&amp;image=http://delo70.ru/media/img/logo_joke.png" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=500,width=710&quot;); return false;" rel="nofollow" target="_blank" title="Написать об этом в блоге">
+					<span class="ico-vk" title="Опубликовать в ВКонтакте">В</span>
+				</a>
+			</noindex>
+			<noindex>
+				<a class="soc_ico" href="http://www.facebook.com/sharer.php?u=http://www.joke.delo70.ru" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" rel="nofollow">
+					<i class="icon-facebook" title="Поделиться в Facebook"></i>
+				</a>
+			</noindex>
+			<noindex>
+				<a class="soc_ico" href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&amp;st._surl=http://www.joke.delo70.ru&amp;st.comments=http://www.joke.delo70.ru" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=500,width=710&quot;); return false;" rel="nofollow" target="_blank" title="Написать об этом в блоге">
+					<span class="ico-ok" title="Опубликовать в Одноклассниках">ОК</span>
+				</a>
+			</noindex>
+			<noindex>
+				<a class="soc_ico" href="http://twitter.com/share?text=joke.delo70.ru - Полный список рабов и рабовладельцев вашего города" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=500,width=710&quot;); return false;" title="Добавить в Twitter">
+					<i class="icon-twitter"></i>
+				</a>
+			</noindex>
+			<noindex>
+				<a class="soc_ico" href="https://plus.google.com/share?url=http://www.joke.delo70.ru" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=500,width=710&quot;); return false;">
+					<i class="icon-google-plus-sign"></i>
+				</a>
+			</noindex>	
+		</div>
+		<div class="dotted">&nbsp;</div>
+		{% if rubric_list %}
+			<div class="row-fluid rublic_list" style="margin-bottom:20px;">
+				{% for list in rubric_list %}
+					<div class="span3">
+						<ul>
+						{% for item in list %}
+							<li class="green {% ifequal item.id ct.id %}active{% endifequal %}" >
+								<a href="{{ item|get_category_vacancy_absolut_url:request.location.slug }}" style="text-decoration:none">
+									<span>{{ item.get_title }}</span><sup>&nbsp;{{ item|count_vacation_location:request.location|default:"0" }}</sup>
+								</a>
+							</li>
+						{% endfor %}
+						</ul>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="dotted">
+				&nbsp;
+			</div>
+		{% endif %}
+		
+		<div class="row-fluid news_item gl">
+			<div class="span12">
+					<div class="pull-left">
+						<a href="javascript:return false;" data-toggle="collapse" data-target="#joke_more" title="Вы до сих пор считаете что вы не рабы?">
+							<img class="margin_min_r" src="{{ MEDIA_URL }}img/joke_new.jpg" alt="Вы до сих пор считаете что вы не рабы?">
+						</a>
+					</div>
+					<h3><a href="javascript:return false;" data-toggle="collapse" data-target="#joke_more" title="Вы до сих пор считаете что вы не рабы?">Вы до сих пор считаете что вы не рабы?</a></h3>
+					<p class="small">
+						<strong>1)</strong> Экономическое принуждение рабов к постоянной работе. 
+						Современный раб вынужден работать без остановки до смерти, т.к. 
+						Средств, заработанных рабом за 1 месяц, хватает, чтобы оплатить жилье за 1 месяц, еду за 1 месяц и проезд за 1 месяц. 
+						Поскольку денег хватает у современного раба всегда только на 1 месяц, современный раб вынужден работать всю жизнь до смерти. 
+						Пенсия также является большой фикцией, т.к. Раб-пенсионер отдает всю пенсию за жилье и еду, и у раба-пенсионера не остается свободных денег.
+					</p>
+					<p class="small">
+						<strong>2)</strong> Вторым механизмом скрытого принуждения рабов к работе является создание искусственного спроса на ненужные товары, которые навязываются рабу с помощью ТВ-рекламы, пиара, моды, престижа и т.п. 
+						Современный раб вовлечен в бесконечную гонку за «новинками», а, следовательно, вынужден постоянно работать. 
+					</p>
+					<p class="small">
+						<strong>3)</strong> Третьим скрытым механизмом экономического принуждения современных рабов является кредитная система, с помощью которой современные рабы все больше и больше втягиваются в кредитную кабалу через механизм процентов по кредитам.
+						<a class="pull-right" href="javascript:return false;" data-toggle="collapse" data-target="#joke_more"  title="подробнее">...подробнее</a>
+					</p>
+					<div id="joke_more" class="collapse">
+						<p class="small">
+							<strong>4)</strong> Четвертым механизмом заставить современных рабов работать на скрытого рабовладельца является миф о государстве. Современный раб считает, что работает на государство, которое равным образом отражает интересы всех слоев населения. Но на самом деле раб работает на структуры, отражающую только интересы рабовладельцев - на, своего рода, комитет по управлению делами рабовладельцев, ибо рабовладельческое государство только для того и существует, чтобы обеспечивать рабовладельцам прибыль, выжимая ее из рабов. Продукция, произведенная рабом, деньги, им заработанные и отнятые рабовладельцами и их государством в виде оплаты за необходимые рабу товары и услуги, в виде различных налогов и платежей, поступают опять в карман рабовладельцев. Понятие же «государства» подменяется мифом о «государстве для всех» и используется, чтобы затуманить мозги рабов, чтобы рабы не задавали лишних вопросов типа: почему рабы работают всю жизнь и остаются всегда бедными? кому конкретно идут деньги, выплаченные рабами в виде налогов, сборов, штрафов и платежей?
+						</p>
+						<p class="small">
+							<strong>5)</strong> Пятым механизмом скрытого принуждения рабов является механизм инфляции и периодически возникающие кризисы, при которых рабы теряют всегда больше, чем рабовладельцы. Рост цен при отсутствии роста зарплаты раба обеспечивает скрытое незаметное ограбление рабов. В кризисы это ограбление становится откровенным – рабов просто вышвыривают на улицу, оставляя без всяких средств существования. Таким образом, современный раб нищает все больше и больше.
+						</p>
+						<p class="small">
+							<strong>6)</strong> Шестым скрытым механизмом заставить раба бесплатно работать является метод лишить раба средств на переезд и покупку недвижимости в другом городе. Этот механизм вынуждает современных рабов работать на единственном предприятии в городе и терпеть самые кабальные условия, т.к. иной работы в городе для рабов просто нет и убежать рабам не на что и некуда.
+						</p>
+						<p class="small">
+							<strong>7)</strong> Седьмым механизмом, заставляющим раба бесплатно работать, является сокрытие информации о реальной стоимости труда раба, реальной стоимости товара, который произвел раб, о той доле заработанного рабом, которую забирает рабовладелец, пользуясь своим правом частной собственности.
+						</p>
+						<p class="small">
+							<strong>8)</strong> Восьмым механизмом скрытого принуждения раба к труду, является специальная идеология, с помощью которой специально купленные рабовладельцем люди, зачастую имеющие высокие научные звания, внушают рабу, что он не раб, а работает он только потому, что сам того хочет («это твой выбор!»). Умные рабы понимают, что не работать на рабовладельца они не могут - они тогда просто умрут от голода, и никакого выбора на самом деле у раба нет. Глупые рабы не понимают даже этого и хвалятся своим рабством.
+						</p>
+						<p class="small">
+							<strong>9)</strong> Девятым механизмом, заставляющим раба безропотно работать на рабовладельцев, является религия, которая убеждает раба, что хорошая справедливая человеческая жизнь у раба будет на небе, после смерти, но при условии, что сейчас на земле придется побыть рабом и прилично пострадать. Религия учит раба не сопротивляться притеснениям и быть довольным своим рабством.
+						</p>
+						<p>
+							<strong>Вы все еще считаете, что вы свободны?</strong>
+						</p>
+					</div>
+			</div>
+
+		</div>
+		<div class="dotted">&nbsp;
+		</div>
+		
+		<div style="text-align:center; width:500px; margin:0 auto;" class="block_item">
+
+			<p style="text-align:center; color: black;font-size: 25px;line-height: 28px;">Возникли вопросы???</p>
+
+			<p>Возникли трудности, не можете зарегистрироваться или что-то другое?</p><p>
+
+			<a href="http://delo70.ru/contacts/">НАПИШИТЕ НАМ И НАШИ РАБЫ ПОМОГУТ ВАМ</a><br>
+
+			</p><p>Хотите помочь улучшить наш сайт, высказать замечания, <br>будем благодарны Вам за уделенное время.</p><p>
+
+			</p><p>Эл. почта: <a href="mailto:info@delo70.ru">info@delo70.ru</a></p>
+
+		</div>
+		<div class="dotted">&nbsp;</div>
+		<div class="block_item" style="text-align:left;margin-bottom:30px">
+
+			<p><strong>Рабы и рабовладельцы Вашего города</strong></p>
+
+			<p>
+				<small>
+					<a href="/">Joke.delo70.ru</a> - это ШУТЛИВАЯ версия сайта <a href="http://delo70.ru/">Delo70.ru</a><br/> Данной шуткой мы не хотели никого оскорбить, просто хотели немного поднять Вам настроение. Надеемся у нас это получилось. </br>P.S. Мы все равны.
+				</small>
+			</p>
+			<p><strong>Размещая вакансии и резюме на шутливой версии сайта <a href="/">Joke.delo70.ru</a> - они также будут отображаться на оригинальной версии сайта <a href="http://delo70.ru/">Delo70.ru</a></strong></p>
+
+		</div>
+	{% endcache %}
+{% endblock %}

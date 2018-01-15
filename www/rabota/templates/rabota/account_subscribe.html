@@ -1,0 +1,77 @@
+{% extends "default.html" %}
+
+{% block title %}Мои подписки{% endblock %}
+
+{% block extra_media %}{% endblock %}
+
+{% block breadcrumb_item %}
+	<li class="active">Мои подписки</li>
+{% endblock %}
+
+{% block h1 %}Мои подписки{% endblock %}
+
+{% block content %}
+
+	<div class="row-fluid">
+		<div class="span6">
+			<div class="border_r">
+				<div class="block_item">
+					{% if form1 %}
+						<form class="form-horizontal" action="" method="post">{% csrf_token %}
+							<div class="control-group">
+								<div class="controls">
+									<h5>Подписка на вакансии</h5>
+								</div>
+							</div>
+							{% with form1 as form %}
+								{% include "forform.html" %}
+								<div>
+									<div class="controls">
+										<p><a href="{% url vacancy_subscribe_del %}">Отписаться</a></p>
+										<input type="hidden" name="AddVacancySubscribeForm" value="1">
+										<button type="submit" class="btn btn-success">Сохранить</button>
+									</div>
+								</div>
+							{% endwith %}
+							
+						</form>
+						
+					{% else %}
+						<h5>Подписка на вакансии</h5><br/>
+						<p>У Вас нет подписки на вакансии. Нажмите "<a href="{% url vacancy_subscribe_add %}">Подписаться на вакансии</a>", укажите параметры желаемых вакансий и получайте уведомления о новых вакансиях.</p>
+						
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		
+		<div class="span6">
+			<div class="block_item">
+				{% if form2 %}
+					<form action="" method="post">{% csrf_token %}
+						<div class="control-group">
+							<div class="controls">
+								<h5>Подписка на резюме</h5>
+							</div>
+						</div>
+						{% with form2 as form %}
+							{% include "forform.html" %}
+							<div>
+								<div class="controls">
+									<p><a href="{% url resume_subscribe_del %}">Отписаться</a></p>
+									<input type="hidden" name="AddResumeSubscribeForm" value="1">
+									<button type="submit" class="btn btn-success">Сохранить</button>
+								</div>
+							</div>
+						{% endwith %}
+					</form>
+				{% else %}
+					<h5>Подписка на резюме</h5><br/>
+					<p>У Вас нет подписки на резюме. Нажмите "<a href="{% url resume_subscribe_add %}">Подписаться на резюме</a>", укажите параметры желаемых резюме и получайте уведомления о новых резюме.</p>
+					
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

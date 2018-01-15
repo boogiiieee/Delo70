@@ -1,0 +1,46 @@
+<style>
+.tizer_item {
+height: 85px;
+overflow: hidden;
+zoom: 1;
+padding: 10px 21px 10px 117px;
+position: relative;
+background-color: #FFF9F0;
+}
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+.tizer_items {
+list-style: none;
+}
+.tizer_item a {
+text-decoration: none !important;
+}
+.tizer_item_img {
+display: block;
+overflow: hidden;
+width: 85px;
+position: absolute;
+left: 21px;
+top: 10px;
+border: 0;
+}
+.tizer_item_title {
+font-size: 14px;
+font-family: Arial, sans-serif;
+text-decoration: none;
+}
+</style>
+{% if img_url %}
+<ul>
+<li class="tizer_item">
+{% if foreign_url %}
+<a href="{{ banner_href }}" target="_blank">
+{% endif %}
+<img class="tizer_item_img" src="{{img_url}}" width="85">
+<span class="tizer_item_title">{{ html_text }}</span>
+{% if foreign_url %}</a>{% endif %}
+</li>
+</ul>
+{% endif %}

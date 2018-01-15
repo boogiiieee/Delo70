@@ -1,0 +1,14 @@
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="{{ banner_width }}" height="{{ banner_height }}">
+<param name="movie" value="{{ swf_url }}{% if foreign_url %}?link1={{ banner_href }}{% endif %}" />
+<!--[if !IE]>-->
+<object type="application/x-shockwave-flash" width="{{ banner_width }}" height="{{ banner_height }}" data="{{ swf_url }}{% if foreign_url %}?link1={{ banner_href }}{% endif %}">
+<param name="movie" value="{{ swf_url }}{% if foreign_url %}?link1={{ banner_href }}{% endif %}" />
+<param name="quality" value="high" />
+<param value="opaque" name="wmode">
+<param name=AllowScriptAccess value=always>
+</object>
+<!--<![endif]-->
+<param name="quality" value="high" />
+<param value="opaque" name="wmode">
+<param name=AllowScriptAccess value=always>
+</object>

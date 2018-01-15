@@ -1,0 +1,56 @@
+{% extends "default.html" %}
+{% load pymorphy_tags %}
+
+{% block title %}{{ request.flatpage.get_title|default:"Поиск вакансий" }}{% endblock %}
+{% block description %}{{ request.flatpage.get_description|default:"Все резюме, вакансии и инструменты для поиска работы." }}{% endblock %}"
+{% block keywords %}{{ request.flatpage.get_keywords|default:"работа, вакансии, работа в томске, поиск вакансий, поиск резюме, резюме, работы, работу, работ, ищу работу" }}{% endblock %}"
+
+{% block extra_media %}{% endblock %}
+
+{% block breadcrumb_item %}
+	<li><a href="{% url vacancy slug_city=request.location.slug %}">Вакансии{% if request.location %} в {{ request.location.name|inflect:"пр" }}{% endif %}</a> <span class="divider">/</span></li>
+	<li class="active">{{ request.flatpage.get_title|default:"Поиск вакансий" }}</li>
+{% endblock %}
+
+{% block h1 %}{{ request.flatpage.get_title|default:"Поиск вакансий" }}{% endblock %}
+
+{% block content %}
+	<div class="row-fluid">
+		{% with paginator.count as len %}
+			{% if len%}
+				<h2>
+			{% else %}
+				<h2 class="t_center">
+			{% endif %}
+				{% if q %}По запросу "{{ q }}" в 
+				{% else %}В
+				{% endif %}			
+				категори{% if category.count == 1 %}и
+				{% else %}ях
+				{% endif %}				 
+				{% for c in category %} 
+					{% if forloop.counter <= 3 %}
+						"<a href="{{ c.get_absolute_vacancy_url }}">{{ c.get_title }}</a>"{% if not forloop.last %}, {% endif %} 
+					{% else %}
+						<span class="other_categories hide">"<a href="{{ c.get_absolute_vacancy_url }}">{{ c.get_title }}</a>"{% if not forloop.last %}, {% endif %} </span>
+					{% endif %}  				
+				{% endfor %}
+				{% if category.count > 3 %}
+					<a href="#" class="other">...</a>
+				{% endif %}найдено {{ len }} {{ "вакансия"|plural:len }}			
+			</h2>
+			<script type="text/javascript">
+				$(function(){
+					$('.other').click(function(){
+						$('.other_categories').show();
+						$('.other').hide();
+						return false;
+					});
+				});
+			</script>			
+			{% include "rabota/vacancy_list.html" %}
+			<div class="dotted">&nbsp;</div>
+			{% include "rabota/vacancy_rubric_list.html" %}
+		{% endwith%}
+	</div>
+{% endblock %}

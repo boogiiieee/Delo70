@@ -1,0 +1,17 @@
+{% extends "default.html" %}
+
+{% block title %}Мои резюме{% endblock %}</h1>
+
+{% block extra_media %}{% endblock %}
+
+{% block breadcrumb_item %}
+	<li class="active">Мои резюме</li>
+{% endblock %}
+
+{% block h1 %}Мои резюме{% endblock %}</h1>
+
+{% block content %}
+	<div class="row-fluid">
+		{% include "rabota/account_resume_list.html" %}
+	</div>
+{% endblock %}

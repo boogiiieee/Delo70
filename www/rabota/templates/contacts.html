@@ -1,0 +1,71 @@
+{% extends "default.html" %}
+
+{% block extra_media %}{% endblock %}
+
+{% block flatpage %}
+	<div class="dotted">
+		<h1>{% block h1 %}{{ request.flatpage.get_title }}{% endblock %}</h1>
+		<span class="bg_white for_btn pull-right"><a class="btn btn-success" href="{% url vacancy_add slug_city=request.location.slug %}">Добавить вакансию</a></span>
+		<a class="bg_white pull-right" href="{% url resume_add slug_city=request.location.slug %}"><small>Добавить резюме</small></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+	{% if form.errors %}
+		<div class="alert alert-error">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<strong>Форма заполнена неправильно. Исправьте ошибки и повторите попытку.</strong> 
+		</div>
+	{% endif %}
+
+	<div class="row-fluid">
+		<div class="media">
+			<form class="form-horizontal pull-left border_r" action="{% url contacts %}" method="post">{% csrf_token %}
+				<div class="control-group{% if form.name.errors %} error-block{% endif %}">
+					<label class="control-label" for="inputLogin">{{ form.name.label }}</label>
+					{% if form.name.errors %}<span class="help-inline error">{{ form.name.errors }}</span>{% endif %}
+					<div class="controls">
+						{{ form.name }}
+					</div>
+				</div>
+				<div class="control-group{% if form.email.errors %} error-block{% endif %}">
+					<label class="control-label" for="inputPassword">{{ form.email.label }}</label>
+					{% if form.email.errors %}<span class="help-inline error">{{ form.email.errors }}</span>{% endif %}
+					<div class="controls">
+						{{ form.email }}
+					</div>
+				</div>
+				<div class="control-group{% if form.phone.errors %} error-block{% endif %}">
+					<label class="control-label" for="inputPassword">{{ form.phone.label }}</label>
+					{% if form.phone.errors %}<span class="help-inline error">{{ form.phone.errors }}</span>{% endif %}
+					<div class="controls">
+						{{ form.phone }}
+					</div>
+				</div>
+				<div class="control-group{% if form.msg.errors %} error-block{% endif %}">
+					<label class="control-label" for="inputPassword">{{ form.msg.label }}</label>
+					{% if form.msg.errors %}<span class="help-inline error">{{ form.msg.errors }}</span>{% endif %}
+					<div class="controls">
+						{{ form.msg }}
+					</div>
+				</div>
+				<div class="control-group{% if form.captcha.errors %} error-block{% endif %}">
+					<label class="control-label" for="inputPassword">{{ form.captcha.label }}</label>
+					{% if form.captcha.errors %}<span class="help-inline error">{{ form.captcha.errors }}</span>{% endif %}
+					<div class="controls">
+						{{ form.captcha }}
+					</div>
+				</div>
+				<div>
+					<div class="controls">
+						<input class="btn btn-success" type="submit" value="Отправить">
+					</div>
+				</div>
+			</form>
+
+			<div class="media-body">
+				{{ request.flatpage.get_content|safe }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

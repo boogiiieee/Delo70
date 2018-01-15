@@ -1,0 +1,16 @@
+{% extends "mail/mail.html" %}
+
+
+{% block top %}
+	<h2>Найдена ошибка на сайте {{ domain }}</h2>
+{% endblock %}
+
+
+
+{% block content %}
+	<p>На странице <a href="{{ url }}">{{ url }}</a> найдена ошибка.</p>
+	<p>Комментарий: {{ text }}</p>
+	<p>Ссылка в админку: {{ link }}</p>
+{% endblock %}
+
+

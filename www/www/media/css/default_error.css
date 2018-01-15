@@ -1,0 +1,24 @@
+html, body{color:#7a7a7a;font-family: Calibri, arial;min-width:1024px;height: 90%;min-height:600px;font-size:20px;overflow:hidden;}
+
+.container
+{
+    width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align:center;
+  }
+h1{margin:100px 0 0 0;font-size: 45px;}
+h2{margin:100px 0 0 0;font-size: 35px;}
+.brand {
+	background: url('/media/img/logo_big.png') no-repeat;
+	display: block;
+	
+	margin-right: auto;
+	margin-left: auto;
+	width: 522px;
+	height: 300px;
+	text-indent: -10000px;
+}
+
+a{color:#0261c2; text-decoration:underline;}
+a:hover, a:focus{text-decoration:none}

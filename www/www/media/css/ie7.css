@@ -1,0 +1,18 @@
+.row-fluid .span11 {
+  width:90%;
+  float:left!important;
+}
+.input-mini {
+	width: 55px!important;
+	padding-left: 0;
+	padding-right: 0;
+	border:none;
+}
+.row-fluid [class*='span']{min-height:21px;}
+
+#block_search .block_form_category {
+width: 208px;
+}
+ul.action li.span3{
+	padding: 10px 0;
+}

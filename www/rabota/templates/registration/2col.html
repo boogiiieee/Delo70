@@ -1,0 +1,27 @@
+{% extends "default.html" %}
+
+{% block extra_media %}{% endblock %}
+
+{% block breadcrumb %}{% endblock %}
+
+{% block flatpage %}
+	<div class="dotted">
+		<h1>{% block h1 %}{{ request.flatpage.get_title }}{% endblock %}</h1>
+		<span class="bg_white for_btn pull-right"><a class="btn btn-success" href="{% url vacancy_add slug_city=request.location.slug %}">Добавить вакансию</a></span>
+		<a class="bg_white pull-right" href="{% url resume_add slug_city=request.location.slug %}"><small>Добавить резюме</small></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+	<div class="row-fluid">
+		<div class="media">
+		
+			{% block subcontent %}
+			{% endblock %}
+			
+			<div class="media-body t_center">
+				{{ request.flatpage.get_content|safe }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

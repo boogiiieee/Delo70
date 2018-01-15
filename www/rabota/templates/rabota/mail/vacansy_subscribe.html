@@ -1,0 +1,27 @@
+{% extends "mail/mail.html" %}
+
+{% block top %}
+	<h2>Новые вакансии на сайте {{ domain }}</h2>
+{% endblock %}
+
+{% block content %}
+	<table style="width:100%;background:#f5f5f5;border:1px solid #ffffff">
+		{% for item in items %}
+			<tr>
+				<th>{{ item.get_post }}</th>
+				<td>
+					{% if item.wage_max and item.type_wages %}
+						Зарплата {{ item.wage_max }} {{ item.type_wages.get_title }}
+					{% endif %}
+				</td>
+				<td><a href="http://{{ domain }}{{ item.get_absolute_url }}">Подробнее</a></td>
+			</tr>
+		{% endfor %}
+	</table>
+	<br/>
+	<br/>
+	<a href="http://{{ domain }}">Больше вакансий на сайте http://{{ domain }}</a>
+	<br/>
+	<br/>
+	<small>Вы получили это письмо, потому что Вы подписаны на получение новых вакансий на сайте http://{{ domain }}. Чтобы отписаться от подписки перейдите по следующей ссылке <a href="http://{{ domain }}/vacancy/subscribe/del/">http://{{ domain }}/vacancy/subscribe/del/</a>.</small>
+{% endblock %}

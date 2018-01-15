@@ -1,0 +1,159 @@
+{% extends "default.html" %}
+{% load complaint_tags pymorphy_tags rabota_tags %}
+
+{% block title %}Резюме на должность {{ item.post }}{% endblock %}
+{% block description %}{% endblock %}
+{% block keywords %}{% endblock %}
+
+{% load thumbnail %}
+
+{% block extra_media %}{% get_comlaint_js %}{% endblock %}
+
+{% block breadcrumb_item %}
+	<li><a href="{% url resume slug_city=city.slug %}">Резюме в {{ city.name|inflect:"пр" }}</a> <span class="divider">/</span></li>
+	{% if ct %}<li><a href="{{ ct|get_category_resume_absolut_url:city.slug }}">{{ ct.get_title }}</a> <span class="divider">/</span></li>{% endif %}
+	<li class="active">{{ item.get_post }}</li>
+{% endblock %}
+
+{% block h1 %}{{ item.get_post|truncatechars:60 }}{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span4">
+				<div class="row-fluid">
+					<div class="span12">
+						<h2>Контактная информация</h2>
+						<ul>
+							<li><strong>ФИО:</strong> <span class="fio">{{ item.get_fio }}</span></li>
+							{% if item.email %}
+								<li><strong>E-mail:</strong> {{ item.email }}</li>
+							{% endif %}
+							{% if item.get_phones %}
+								<li><strong>Телефоны:</strong> {{ item.get_phones }}</li>
+							{% endif %}
+							{% if item.icq %}
+								<li><strong>ICQ:</strong> {{ item.icq }}</li>
+							{% endif %}
+							{% if item.skype %}
+								<li><strong>Skype:</strong> {{ item.skype }}</li>
+							{% endif %}
+							{% if item.city %}
+								<li><strong>Город:</strong> {{ item.city }}</li>
+							{% endif %}
+							{% if item.area %}
+								<li><strong>Район:</strong> {{ item.area }}</li>
+							{% endif %}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="span8">
+				<div class="row-fluid">
+					<div class="span8">
+						<h2>Сведения о соискателе</h2>
+						<ul>
+							{% if item.post %}
+								<li><strong>Должность:</strong> {{ item.post }}</li>
+							{% endif %}
+							{% if item.get_wage %}
+								<li><strong>Зарплата:</strong> от {{ item.get_wage }} </li>
+							{% endif %}
+							{% if item.experience %}
+								<li><strong>Стаж:</strong> {{ item.experience }} </li>
+							{% endif %}
+							{% if item.schedule %}
+								<li><strong>График работы:</strong> {{ item.schedule }}</li>
+							{% endif %}
+							{% if item.type_employment %}
+								<li><strong>Тип занятости:</strong> {{ item.type_employment }} </li>
+							{% endif %}
+							{% if item.summary %}
+								<li><strong>Резюме:</strong> <a href="{{ item.summary.url }}" title="Резюме {{ item.get_fio }}">скачать</a></li>
+							{% endif %}
+							
+						</ul>
+					</div>
+					{% if item.photo %}
+						<div class="span4">
+							{% thumbnail item.photo "150" as im %}
+								<p class="pull-right" ><img src="{{ im.url }}" alt="{{ item.get_fio }}" /></p>
+							{% endthumbnail %}
+							<div class="clearfix"></div>
+						</div>
+					{% endif %}					
+				</div>
+			</div>			
+		</div>
+		<hr/>
+		{% if item.education or item.educational_institution or item.major_subject or item.extras_education %}
+		<div class="row-fluid">
+			<div class="span12">
+				<h2>Образование</h2>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span4">
+				<ul>
+					{% if item.education %}
+						<li><strong>Образование:</strong> {{ item.education }}</li>
+					{% endif %}
+					{% if item.educational_institution %}
+						<li><strong>Учебное заведение:</strong> {{ item.educational_institution }}</li>
+					{% endif %}
+					{% if item.major_subject %}
+						<li><strong>Основная специальность:</strong> {{ item.major_subject }}</li>
+					{% endif %}
+				</ul>
+			</div>
+			<div class="span8">
+				<ul>
+					{% if item.extras_education %}
+						<li><strong>Доп. образование:</strong> {{ item.extras_education|linebreaksbr }}</li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+		<hr/>
+		{% endif %}
+		{% if item.sex or item.get_marital_status or item.get_driver_license or item.get_willing_travel or item.smoke %}
+			<div class="row-fluid">
+				<div class="span12">
+					<h2>Дополнительные сведения</h2>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span4">
+					<ul>
+						{% if item.get_dob %}
+							<li><strong>Дата рождения:</strong> {{ item.get_dob }}</li>
+						{% endif %}
+						{% if item.sex %}
+							<li><strong>Пол:</strong> {{ item.get_sex_display }}</li>
+						{% endif %}
+						{% if item.get_marital_status %}
+							<li><strong>Семейное положение:</strong> {{ item.get_marital_status }}</li>
+						{% endif %}
+						{% if item.get_driver_license %}
+							<li><strong>Водительские права: </strong>{{ item.get_driver_license }}</li>
+						{% endif %}
+						{% if item.get_willing_travel %}
+							<li><strong>Готов к командировкам: </strong>{{ item.get_willing_travel }}</li>
+						{% endif %}
+						{% if item.smoke %}
+							<li><strong>Курю: </strong>да</li>
+						{% endif %}
+					</ul>
+				</div>
+				{% if item.personal_qualities %}
+					<div class="span8">
+						<ul>
+							<li><strong>Личные качества: </strong>{{ item.personal_qualities|linebreaksbr }}</li>
+						</ul>
+					</div>
+				{% endif %}
+			</div>
+		{% endif %}
+		{% get_complaint %}
+	</div>
+{% endblock %}

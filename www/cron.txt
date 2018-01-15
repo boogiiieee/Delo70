@@ -1,0 +1,12 @@
+0 3 1 * * python /var/home/hosting_gladkiyva/projects/rabota/www/manage.py captcha_clean
+0 3 2 * * python /var/home/hosting_gladkiyva/projects/rabota/www/manage.py cleanupregistration
+0 3 3 * * /usr/bin/flock -xn /var/home/hosting_gladkiyva/projects/rabota/lock/thumbnail.lock python /var/home/hosting_gladkiyva/projects/rabota/www/manage.py thumbnail cleanup
+0 3 4 * * /usr/bin/flock -xn /var/home/hosting_gladkiyva/projects/rabota/lock/cleanup.lock python /var/home/hosting_gladkiyva/projects/rabota/www/manage.py cleanup
+
+0 12 * * * /usr/bin/flock -xn /var/home/hosting_gladkiyva/projects/rabota/lock/send_subscribe.lock python /var/home/hosting_gladkiyva/projects/rabota/www/manage.py send_subscribe
+*/5 * * * * /usr/bin/flock -xn /var/home/hosting_gladkiyva/projects/rabota/lock/file_parser_run.lock python /var/home/hosting_gladkiyva/projects/rabota/www/manage.py file_parser_run
+
+0 5 */2 * * /usr/bin/flock -xn /var/home/hosting_gladkiyva/projects/rabota/lock/overwrite_archive.lock python /var/home/hosting_gladkiyva/projects/rabota/www/manage.py overwrite_archive
+0 4 1-31/2 * * /usr/bin/flock -xn /var/home/hosting_gladkiyva/projects/rabota/lock/removeoldcomplaints.lock python /var/home/hosting_gladkiyva/projects/rabota/www/manage.py removeoldcomplaints
+
+*/5 * * * * /usr/bin/flock -xn /var/home/hosting_gladkiyva/projects/rabota/lock/linkzilla_update.lock python /var/home/hosting_gladkiyva/projects/rabota/www/manage.py linkzilla_update

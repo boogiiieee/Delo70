@@ -1,0 +1,18 @@
+{% csrf_token %}
+
+<div class="row-fluid form-inline">
+	<div class="span12 block_form">
+		{{ search.q }}
+		<input class="input-mini pull-right" type="submit" value="Искать">
+	</div>
+	
+	<div class="pull-right block_form_category">
+		{{ search.category }}
+	</div>
+	<div class="pull-left block_form_search">
+		<label class="radio"><input type="radio" name="search" value="vacancy" checked> Вакансии</label>
+		<label class="radio" style="margin-left:10px;"><input type="radio" name="search" value="resume"> Резюме</label>
+	</div>
+	<div class="pull-right block_form_search"><a href="{% url vacancy_search_advanced slug_city=request.location.slug %}"><span>Расширенный поиск</span></a></div>
+</div>
+

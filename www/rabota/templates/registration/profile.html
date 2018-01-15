@@ -1,0 +1,52 @@
+{% extends "default.html" %}
+
+{% block extra_media %}{% endblock %}
+
+{% block title %}Профиль пользователя{% endblock %}
+
+{% block breadcrumb_item %}
+	<li class="active">Профиль пользователя</li>
+{% endblock %}
+
+{% block h1 %}Профиль пользователя{% endblock %}
+
+{% block content %}
+	<div class="row-fluid">
+		<div class="span6 ">
+			<form class="form-horizontal border_r" action="{% url account_profile username=request.user.username %}" method="post">
+				<div class="control-group">
+					<div class="controls">
+						<h5>Профиль</h5>
+					</div>
+				</div>
+				{% csrf_token %}
+				{% with form1 as form %}
+					{% include "forform.html" %}
+					<div>
+						<div class="controls">
+							<button type="submit" class="btn btn-success">Сохранить</button>
+						</div>
+					</div>
+				{% endwith %}
+			</form>
+		</div>
+		<div class="span6">
+			<form class="form-horizontal" action="{% url account_change_password username=request.user.username %}" method="post">
+				<div class="control-group">
+					<div class="controls">
+						<h5>Сменить пароль</h5>
+					</div>
+				</div>
+				{% csrf_token %}
+				{% with form2 as form %}
+					{% include "forform.html" %}
+					<div>
+						<div class="controls">
+							<button type="submit" class="btn btn-success">Сохранить</button>
+						</div>
+					</div>
+				{% endwith %}
+			</form>
+		</div>
+	</div>
+{% endblock %}
